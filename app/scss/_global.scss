@@ -61,13 +61,22 @@ body {
 }
 
 .button {
+  display: inline-block;
   padding: 15px 45px;
   border-radius: 50px;
+  border: 3px solid $accent;
+  text-transform: uppercase;
   color: $white;
   background-color: $accent;
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: 0 0 20px #FF0606;
+  }
 }
 
 .button-nav {
+  display: inline-block;
   padding: 5px 25px;
   border: 3px solid $accent;
   border-radius: 50px;
