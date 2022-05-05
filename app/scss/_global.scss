@@ -1,4 +1,87 @@
-@import 'reset';
-@import 'vars';
-@import 'fonts';
-@import 'global';
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: $white;
+  background-color: #14151A;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.animation {
+  transition: color 0.6s;
+
+  &:hover {
+    color: $accent;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($accent, 0.7);
+    border-radius: 5px;
+  }
+
+  &:active {
+    color: $white;
+    opacity: 0.5;
+    box-shadow: none;
+  }
+}
+
+.button {
+  padding: 15px 45px;
+  border-radius: 50px;
+  color: $white;
+  background-color: $accent;
+}
+
+.button-nav {
+  padding: 5px 25px;
+  border: 3px solid $accent;
+  border-radius: 50px;
+  color: $white;
+  background-color: transparent;
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: (0px 0px 7px #FF0606);
+  }
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.2;
+}
