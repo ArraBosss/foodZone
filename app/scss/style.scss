@@ -4,9 +4,10 @@
 @import 'global';
 
 .header {
-  padding: 30px 0 100px;
+  padding: 30px 0 50px;
 
   &__menu {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,6 +22,67 @@
 
     &:not(:last-child) {
       margin-right: 40px;
+    }
+
+    &--sub {
+      &:hover {
+        .sub-menu {
+          visibility: visible;
+          opacity: 1;
+          z-index: 2;
+          transform: translateY(0%);
+          transition-delay: 0s, 0s, 0.3s;
+        }
+      }
+    }
+  }
+}
+
+.sub-menu {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  left: 0;
+  padding-top: 15px;
+  transform: translateY(-2em);
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+
+  &__list {
+
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $card;
+    border-radius: 10px 10px 50px 50px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+
+    svg {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+      fill: $white;
+      transition: fill 0.5s;
+    }
+
+    &:hover {
+      svg {
+        fill: $accent;
+      }
     }
   }
 }
@@ -75,6 +137,7 @@
 .banner {
 
   &__wrapper {
+    height: calc(100vh - 120px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,22 +147,25 @@
     max-width: 600px;
     margin-bottom: 50px;
     font-weight: 500;
-    font-size: 50px;
+    font-size: 45px;
     line-height: 1.1;
   }
 
   &__item {
     font-weight: 700;
-    font-size: 66px;
+    font-size: 60px;
     text-transform: uppercase;
   }
 
   &__text {
-    max-width: 350px;
-    margin-bottom: 50px;
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 1.2;
+
+    p {
+      max-width: 350px;
+      margin-bottom: 50px;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 1.2;
+    }
   }
 
   &__btn {
@@ -110,18 +176,13 @@
     font-size: 15px;
     line-height: 1.2;
     text-transform: uppercase;
-    transition: box-shadow 0.5s, background-color 0.6s;
 
     &:not(:last-child) {
       margin-right: 20px;
     }
-
-    &:hover {
-      box-shadow: 0 0 20px #FF0606;
-      background-color: #FF0606;
-    }
   }
 }
+
 
 
 
