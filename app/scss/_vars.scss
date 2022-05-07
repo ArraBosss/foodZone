@@ -9,3 +9,7 @@ $breakpoints: (
   "tablet-2": 992px,
   "desktop": 1230px
 );
+
+@keyframes strokeanim {
+  to { stroke-dashoffset: 0; }
+}
