@@ -25,6 +25,7 @@
     }
 
     &--sub {
+
       &:hover {
         .sub-menu {
           visibility: visible;
@@ -184,21 +185,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer {
   padding: 45px 0 30px;
   background-color: #1B1C21;
@@ -255,7 +241,11 @@
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    transition: box-shadow 0.5s;
+    transition: box-shadow 0.5s, transform 1s;
+
+    &:hover {
+      transform: rotate(360deg);
+    }
 
     &:focus {
       box-shadow: 0 0 0 2px rgba($white, 0.7);
