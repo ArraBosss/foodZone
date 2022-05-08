@@ -30,7 +30,7 @@
         .sub-menu {
           visibility: visible;
           opacity: 1;
-          z-index: 5;
+          z-index: 10;
           transform: translateY(0%);
           transition-delay: 0s, 0s, 0.3s;
         }
@@ -182,12 +182,12 @@
 
   &__img {
     position: relative;
-    z-index: 10;
+    z-index: 5;
   }
 
   &__circuit {
-    z-index: -1;
     position: absolute;
+    z-index: -1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -199,6 +199,7 @@
     stroke-dasharray: 1900;
     stroke-dashoffset: 1900;
     animation: strokeanim 4s alternate infinite;
+    animation-timing-function: ease-in-out;
   }
 }
 
@@ -258,7 +259,7 @@
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    transition: box-shadow 0.5s, transform 1s;
+    transition: box-shadow 0.5s, transform 0.7s;
 
     &:hover {
       transform: rotate(360deg);
