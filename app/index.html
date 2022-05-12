@@ -24,7 +24,7 @@
               <a class="menu__link animation" href="#">Акции</a>
             </li>
             <li class="menu__item menu__item--sub">
-              <a class="menu__link menu__link animation" href="#">Меню</a>
+              <a class="menu__link menu__link--click animation" href="#">Меню</a>
               <div class="sub-menu">
 
 
@@ -140,42 +140,100 @@
     <main class="main">
       <h1 class="sr-only">Food Zone - самая вкусная интернациональня еда</h1>
 
-      <section class="banner">
+      <section class="hero">
         <h2 class="sr-only">О еде и доставке</h2>
 
         <div class="container">
-          <div class="banner__wrapper">
-            <div class="banner__content">
-              <h3 class="banner__title">
+          <div class="hero__wrapper">
+            <div class="hero__content">
+              <h3 class="hero__title">
                 Получи вкусную еду в
-                <span class="banner__item">
+                <span class="hero__item">
                   один клик!
                 </span>
               </h3>
 
-              <div class="banner__text">
+              <div class="hero__text">
                 <p>
                   У нас самая вкусная еда
                   по самым низким ценам
                 </p>
               </div>
 
-              <a class="banner__btn button" href="#">Заказать сейчас</a>
+              <a class="hero__btn button" href="#">Заказать сейчас</a>
 
-              <a class="banner__btn button-nav" href="#">Посетить ресторан</a>
+              <a class="hero__btn button-nav" href="#">Посетить ресторан</a>
             </div>
 
-            <div class="banner__img">
-              
+            <div class="hero__img">
 
               <img width="485" height="450" src="images/decor/banner_background.png" alt="Настоящая итальянская пицца">
-              <svg class="banner__circuit">
+              <svg class="hero__circuit">
                 <use xlink:href="images/sprite.svg#icon-circuit"></use>
               </svg>
+
             </div>
           </div>
+        </div>
+      </section>
 
+      <section class="kitchen">
+        <div class="container">
+          <h2 class="kitchen__title title">Наша кухня</h2>
+          <ul class="kitchen__list">
+            <li class="kitchen__item">
+              <a class="kitchen__link active" href="#">Пицца</a>
+            </li>
+            <li class="kitchen__item">
+              <a class="kitchen__link" href="#">Сеты</a>
+            </li>
+            <li class="kitchen__item">
+              <a class="kitchen__link" href="#">Роллы</a>
+            </li>
+            <li class="kitchen__item">
+              <a class="kitchen__link" href="#">Бургеры</a>
+            </li>
+            <li class="kitchen__item">
+              <a class="kitchen__link" href="#">Паста</a>
+            </li>
+            <li class="kitchen__item">
+              <a class="kitchen__link" href="#">Салаты</a>
+            </li>
+            <li class="kitchen__item">
+              <a class="kitchen__link" href="#">Снэки</a>
+            </li>
+            <li class="kitchen__item">
+              <a class="kitchen__link" href="#">Напитки</a>
+            </li>
+          </ul>
 
+          <ul class="popular">
+            <li class="popular__item">
+              <article class="product-card">
+                <img class="product-card__img" src="images/catalog/bbq-400x400.png" width="250" height="250"
+                  alt="Фото пиццы bbq">
+
+                <h3 class="product-card__title">
+                  BBQ
+                </h3>
+                <div class="product-card__description">
+                  <p>
+                    Пицца на сливочной основе в
+                    сочетании с сыром, телятиной BBQ,
+                    беконом, шампиньонами, петрушкой
+                    и красным маринованным луком
+                  </p>
+                </div>
+
+                <span class="product-card__price">215
+                  <span class="product-card__currency">грн.</span>
+                </span>
+
+                <button class="product-card__btn button" type="button">В корзину</button>
+              </article>
+            </li>
+            
+          </ul>
 
         </div>
       </section>
@@ -200,7 +258,7 @@
           </div>
 
           <div class="footer-top__content">
-            <h3 class="footer-top__title title">
+            <h3 class="footer-top__title">
               Информация
             </h3>
             <ul class="footer-top__list">
@@ -220,7 +278,7 @@
           </div>
 
           <address class="footer-top__content">
-            <h3 class="footer-top__title title">
+            <h3 class="footer-top__title">
               Контакты
             </h3>
             <ul class="footer-top__list">
@@ -245,7 +303,7 @@
           </address>
 
           <div class="footer-top__content">
-            <h3 class="footer-top__title title">
+            <h3 class="footer-top__title">
               Время работы
             </h3>
             <ul class="footer-top__list">
@@ -259,7 +317,7 @@
           </div>
 
           <div class="footer-top__content">
-            <h3 class="footer-top__title title">
+            <h3 class="footer-top__title">
               Соц. сети
             </h3>
             <ul class="networks">
