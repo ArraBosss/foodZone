@@ -367,9 +367,133 @@
             </li>
           </ul>
 
-          <a class="kitchen__btn button" href="#">Смотреть все</a>      
+          <a class="kitchen__btn button" href="#">Смотреть все</a>
         </div>
       </section>
+
+      <section class="order">
+        <div class="container">
+          <h2 class="order__title title">Желаете забронировать столик?</h2>
+
+          <div class="order__wrapper">
+            <form class="form" action="">
+
+              <div class="form__top">
+                <div class="form__col form__col--top">
+                  <label class="form__label" for="name">
+                    <span class="form__span">Ваше имя</span>
+                    <input class="form__input form__input--top" id="name" type="text" required>
+                  </label>
+                </div>
+
+                <div class="form__col form__col--top">
+                  <label class="form__label" for="phone">
+                    <span class="form__span">Телефон</span>
+                    <input class="form__input form__input--top" id="phone" type="tel" required>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form__bottom">
+                <div class="form__col form__col--bottom">
+                  <span class="form__span">Дата</span>
+                  <input class="form__input form__input--bottom" type="date" id="date" required>
+                </div>
+
+                <!-- <div class="form__col form__col--bottom">
+                  <span class="form__span">Время</span>
+                  <select class="form__input form__input--bottom" id="time" required>
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">12:00</option>
+
+                  </select>
+                </div> -->
+
+                <div class="form__col form__col--bottom">
+                  <span class="form__span">Время</span>
+                  <select class="form__select" name="time" style="display: none;">
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:30">18:30</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="21:30">21:30</option>
+                  </select>
+
+                  <div class="form__select form__input form__input--bottom">
+                    <span class="form__current">10:00</span>
+                    <ul class="form__list">
+                      <li data-value="10:00" class="form__option">10:00</li>
+                      <li data-value="10:30" class="form__option">10:30</li>
+                      <li data-value="11:00" class="form__option">11:00</li>
+                      <li data-value="11:30" class="form__option">11:30</li>
+                      <li data-value="12:00" class="form__option">12:00</li>
+                      <li data-value="12:30" class="form__option">12:30</li>
+                      <li data-value="13:00" class="form__option">13:00</li>
+                      <li data-value="13:30" class="form__option">13:30</li>
+                      <li data-value="14:00" class="form__option">14:00</li>
+                      <li data-value="14:30" class="form__option">14:30</li>
+                      <li data-value="15:00" class="form__option">15:00</li>
+                      <li data-value="15:30" class="form__option">15:30</li>
+                      <li data-value="16:00" class="form__option">16:00</li>
+                      <li data-value="16:30" class="form__option">16:30</li>
+                      <li data-value="17:00" class="form__option">17:00</li>
+                      <li data-value="17:30" class="form__option">17:30</li>
+                      <li data-value="18:00" class="form__option">18:00</li>
+                      <li data-value="18:30" class="form__option">18:30</li>
+                      <li data-value="19:00" class="form__option">19:00</li>
+                      <li data-value="19:30" class="form__option">19:30</li>
+                      <li data-value="20:00" class="form__option">20:00</li>
+                      <li data-value="20:30" class="form__option">20:30</li>
+                      <li data-value="21:00" class="form__option">21:00</li>
+                      <li data-value="21:30" class="form__option">21:30</li>
+                    </ul>
+                  </div>
+
+                </div>
+
+                <div class="form__col form__col--bottom">
+                  <label class="form__label" for="amount">
+                    <span class="form__span">Кол-во гостей</span>
+                    <input class="form__input form__input--bottom" id="amount" type="text" required>
+                  </label>
+                </div>
+              </div>
+            </form>
+
+            <span class="order__text">Наш менеджер свяжется с вами, чтобы уточнить детали и возможность
+              бронирования.</span>
+
+            <button class="order__btn button" type="submit">Оставить заявку</button>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
 
     </main>
 
@@ -412,11 +536,12 @@
 
           <address class="footer-top__content">
             <h3 class="footer-top__title">
-              Контакты
+              Наши контакты
             </h3>
             <ul class="footer-top__list">
               <li class="footer-top__item">
-                <a class="footer-top__link animation" href="#">г. Горское ул. Советская, 5</a>
+                <a class="footer-top__link animation" href="https://goo.gl/maps/xbfn6VLXgeqw78yv6" target="_blank">г.
+                  Горское ул. Советская, 5</a>
               </li>
               <li class="footer-top__item">
                 <span>
