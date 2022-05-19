@@ -315,7 +315,7 @@
   &__title {
     text-align: center;
   }
-  
+
   &__wrapper {
     max-width: 545px;
     padding: 35px 25px;
@@ -344,9 +344,7 @@
   }
 
   &__col {
-    
     width: 235px;
-
 
     &:not(:last-child) {
       margin-right: 25px;
@@ -362,12 +360,16 @@
     }
   }
 
-
   &__span {
     display: block;
     margin-bottom: 15px;
     font-weight: 500;
     font-size: 18px;
+
+    &::after {
+      content: "*";
+      color: $accent;
+    }
   }
 
   &__input {
@@ -385,31 +387,73 @@
   }
 
   &__select {
-    position: absolute;
+    position: relative;
     width: 148px;
+    cursor: pointer;
 
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url('../images/icons/icon-arrow.svg');
+      width: 12px;
+      height: 7px;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      opacity: 0.5;
+      transition: transform 0.3s;
+    }
+
+    &--active {
+      border-radius: 15px 15px 0 0;
+
+      &::after {
+        top: 45%;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__wrapper {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
+
+    &--active {
+      display: block;
+      border-top: 1px solid #4c4e5b;
+    }
   }
 
   &__list {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    z-index: 10;
-    max-height: 200px;
-    width: 100%;
-    border-radius: 0 0 15px 15px;
+    max-height: 220px;
     background-color: #2E2F37;
+    scroll-snap-type: y mandatory;
     overflow: auto;
   }
 
   &__option {
     padding: 19px 10px 19px 20px;
     cursor: pointer;
-    border-top: 1px solid #4c4e5b;
-    
+    scroll-snap-align: start;
 
-    
-    
+    &:not(:last-child) {
+      border-bottom: 1px solid #4c4e5b;
+    }
+
+    &:hover {
+      background-color: $accent;
+    }
+
+    &--active {
+      background-color: $accent;
+    }
   }
 
 }
@@ -421,9 +465,11 @@
 
 
 
+
+
 .footer {
   padding: 45px 0 30px;
-  background-color: #1B1C21;
+  background-color: $card;
 }
 
 .footer-logo {
