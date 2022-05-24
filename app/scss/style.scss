@@ -238,11 +238,18 @@
 }
 
 .popular {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 60px;
-  grid-row-gap: 50px;
-  margin-bottom: 60px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 50px;
+    margin-bottom: 60px;
+  }
+}
+
+.sets {
+  display: none;
 }
 
 .product-card {
@@ -275,8 +282,16 @@
     margin-bottom: 15px;
     transition: transform 0.7s;
 
-    &:hover {
-      transform: translateZ(0) scale(1.1, 1.1) translateY(-10px) rotate(-7deg);
+    &--rotate {
+      &:hover {
+        transform: translateZ(0) scale(1.1, 1.1) translateY(-10px) rotate(-7deg);
+      }
+    }
+
+    &--scale {
+      &:hover {
+        transform: translateZ(0) scale(1.1, 1.1);
+      }
     }
   }
 
@@ -409,7 +424,7 @@
       border-radius: 15px 15px 0 0;
 
       &::after {
-        top: 45%;
+        top: 44%;
         transform: rotate(-90deg);
       }
     }

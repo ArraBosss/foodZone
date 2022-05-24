@@ -35,7 +35,9 @@ function styles() {
 
 function scripts() {
     return src([
-            'app/js/main.js'
+            'app/js/main.js',
+            'app/js/tabs.js',
+            'app/js/select.js'
         ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
