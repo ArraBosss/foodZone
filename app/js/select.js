@@ -1,3 +1,9 @@
+const dropDownBtn = document.querySelector('.form__select'),
+      dropDownList = document.querySelector('.form__wrapper'),
+
+
+
+
 document.querySelector('.form__select').addEventListener('click', () => {
   document.querySelector('.form__wrapper').classList.toggle('form__wrapper--active');
   document.querySelector('.form__select').classList.toggle('form__select--active');
@@ -17,6 +23,13 @@ document.querySelectorAll('.form__option').forEach( function (listItem){
 document.addEventListener('click', function (e) {
   
   if (e.target !== document.querySelector('.form__select')) {
+    document.querySelector('.form__wrapper').classList.remove('form__wrapper--active');
+    document.querySelector('.form__select').classList.remove('form__select--active');
+  }
+})
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Tab' || e.key === 'Escape') {
     document.querySelector('.form__wrapper').classList.remove('form__wrapper--active');
     document.querySelector('.form__select').classList.remove('form__select--active');
   }
