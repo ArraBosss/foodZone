@@ -248,7 +248,8 @@
   }
 }
 
-.sets {
+.sets,
+.rolls {
   display: none;
 }
 
@@ -274,6 +275,12 @@
     border-radius: 15px;
   }
 
+  &--resize {
+    &::after {
+      height: calc(100% - 85px);
+    }
+  }
+
   &__link {
     align-self: center;
   }
@@ -297,6 +304,7 @@
 
   &__title {
     margin-bottom: 20px;
+    text-align: left;
     font-size: 20px;
   }
 
@@ -470,7 +478,6 @@
       background-color: $accent;
     }
   }
-
 }
 
 
