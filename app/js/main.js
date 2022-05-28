@@ -3,7 +3,5 @@
 // });
 
 
-window.addEventListener('DOMContentLoaded', () => {
-  tabs('.kitchen__list', '.kitchen__item', '.popular', 'active');
-});
+
 

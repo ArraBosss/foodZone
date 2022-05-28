@@ -249,7 +249,8 @@
 }
 
 .sets,
-.rolls {
+.rolls,
+.burgers {
   display: none;
 }
 
@@ -322,10 +323,21 @@
     }
   }
 
-  &__price {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     margin-bottom: 25px;
+  }
+
+  &__price {
     font-weight: 500;
     font-size: 20px;
+  }
+
+  &__weight{
+    color: #767983;
   }
 
   &__btn {

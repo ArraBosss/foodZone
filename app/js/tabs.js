@@ -37,3 +37,7 @@ function tabs(headerSelector, tabSelector, contentSelector, activeClass) {
   });
 };
 
+window.addEventListener('DOMContentLoaded', () => {
+    tabs('.kitchen__list', '.kitchen__item', '.popular', 'active');
+  });
+
