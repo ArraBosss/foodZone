@@ -304,22 +304,24 @@
   }
 
   &__title {
+    min-height: 48px;
     margin-bottom: 20px;
     text-align: left;
     font-size: 20px;
+    @include line-clamp(2);
   }
 
   &__description {
     flex: 1;
 
     p {
+      min-height: 85px;
       margin-bottom: 25px;
-      min-height: 69px;
       color: $description;
       overflow: hidden;
       text-overflow: ellipsis;
       text-align: left;
-      @include line-clamp(4);
+      @include line-clamp(5);
     }
   }
 
