@@ -36,6 +36,7 @@ function styles() {
 function scripts() {
     return src([
             'app/js/main.js',
+            'app/js/parallax.js',
             'app/js/select.js',
             'app/js/tabs.js'
             
