@@ -1,5 +1,6 @@
 document.addEventListener('mousemove', parallax);
 
+
 function parallax(e) {
   this.querySelectorAll('.hero__parallax').forEach(hero => {
     const speed = hero.getAttribute('data-speed')

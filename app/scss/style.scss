@@ -206,7 +206,7 @@
   &__list {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   &__item {
@@ -256,7 +256,7 @@
   width: 350px;
   height: 100%;
   margin: auto;
-  padding: 0 25px 30px;
+  padding: 0 25px 25px;
 
   &::after {
     content: "";
@@ -281,7 +281,7 @@
   }
 
   &__img {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     transition: transform 0.7s;
 
     &--rotate {
@@ -417,7 +417,7 @@
     }
   }
 
-  &__select {
+  &__button {
     position: relative;
     width: 148px;
     cursor: pointer;
@@ -446,6 +446,7 @@
     }
   }
 
+
   &__wrapper {
     display: none;
     position: absolute;
@@ -453,6 +454,7 @@
     left: 0;
     top: 100%;
     width: 100%;
+    margin-top: -1px;
     border-radius: 0 0 15px 15px;
     overflow: hidden;
 
