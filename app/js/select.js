@@ -1,24 +1,50 @@
+//Polyfill for method "forEach"
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+      thisArg = thisArg || window;
+      for (var i = 0; i < this.length; i++) {
+          callback.call(thisArg, this[i], i, this);
+      }
+  };
+}
 
-document.querySelector('.form__select').addEventListener('click', () => {
-  document.querySelector('.form__wrapper').classList.toggle('form__wrapper--active');
-  document.querySelector('.form__select').classList.toggle('form__select--active');
+document.querySelectorAll('.form__select').forEach( function (dropDownWrapper) {
+
+  const dropDownBtn = dropDownWrapper.querySelector('.form__button'),
+      dropDownList = dropDownWrapper.querySelector('.form__wrapper'),
+      dropDownListItems = dropDownList.querySelectorAll('.form__option'),
+      dropDownInput = dropDownWrapper.querySelector('.form__time'),
+      dropDownCurrent = dropDownWrapper.querySelector('.form__current');
+
+
+dropDownBtn.addEventListener('click', () => {
+  dropDownList.classList.toggle('form__wrapper--active');
+  dropDownBtn.classList.toggle('form__button--active');
 });
 
-document.querySelectorAll('.form__option').forEach( function (listItem){
+dropDownListItems.forEach( function (listItem) {
   listItem.addEventListener('click', function (e) {
     e.stopPropagation();
-    document.querySelector('.form__current').innerText = this.innerText;
-    document.querySelector('.form__time').value = this.dataset.value;
-    document.querySelector('.form__wrapper').classList.remove('form__wrapper--active');
-    document.querySelector('.form__select').classList.remove('form__select--active');
-
+    dropDownCurrent.innerText = this.innerText;
+    dropDownInput.value = this.dataset.value;
+    dropDownList.classList.remove('form__wrapper--active');
+    dropDownBtn.classList.remove('form__button--active');
   })
 })
 
 document.addEventListener('click', function (e) {
   
-  if (e.target !== document.querySelector('.form__select')) {
-    document.querySelector('.form__wrapper').classList.remove('form__wrapper--active');
-    document.querySelector('.form__select').classList.remove('form__select--active');
+  if (e.target !== dropDownBtn) {
+    dropDownList.classList.remove('form__wrapper--active');
+    dropDownBtn.classList.remove('form__button--active');
   }
 })
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Tab' || e.key === 'Escape') {
+    dropDownBtn.classList.remove('form__button--active');
+    dropDownList.classList.remove('form__wrapper--active');
+  }
+})
+})
+
