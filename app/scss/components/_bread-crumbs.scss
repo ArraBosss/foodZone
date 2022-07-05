@@ -1,0 +1,36 @@
+.bread-crumbs {
+  margin: 40px 0;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+
+
+    &:not(:first-child) {
+      position: relative;
+      margin-left: 6px;
+      padding-left: 12px;
+    }
+
+    &:not(:first-child)::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 6px;
+      height: 10px;
+      background-image: url('../../images/icons/icon-chevron.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  
+
+  &__link {
+    font-size: 16px;
+  }
+}

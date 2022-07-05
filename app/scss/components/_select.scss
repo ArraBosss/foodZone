@@ -1,0 +1,151 @@
+.order {
+  padding-bottom: 60px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 0;
+  }
+
+  &__table {
+    max-width: 545px;
+    padding: 35px 25px;
+    background-color: $card;
+    border-radius: 10px;
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 29px;
+    text-align: left;
+    font-size: 10px;
+    opacity: 0.7;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}
+
+.form {
+
+  &__top,
+  &__bottom {
+    display: flex;
+  }
+
+  &__col {
+    width: 235px;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+
+    &--top {
+      margin-bottom: 30px;
+    }
+
+    &--bottom {
+      width: 148px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__span {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 18px;
+
+    &::after {
+      content: "*";
+      color: $accent;
+    }
+  }
+
+  &__input {
+    padding: 20px 10px 19px 20px;
+    border: none;
+    border-radius: 15px;
+    color: $white;
+    background-color: #2E2F37;
+
+    &--top,
+    &--bottom {
+      width: 100%;
+      appearance: none;
+    }
+  }
+
+  &__button {
+    position: relative;
+    width: 148px;
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url('../images/icons/icon-drop.svg');
+      width: 12px;
+      height: 7px;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      opacity: 0.5;
+      transition: transform 0.3s;
+    }
+
+    &--active {
+      border-radius: 15px 15px 0 0;
+
+      &::after {
+        top: 44%;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__wrapper {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    margin-top: -1px;
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
+
+    &--active {
+      display: block;
+      border-top: 1px solid #4c4e5b;
+    }
+  }
+
+  &__list {
+    max-height: 220px;
+    background-color: #2E2F37;
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+  }
+
+  &__option {
+    padding: 19px 10px 19px 20px;
+    cursor: pointer;
+    scroll-snap-align: start;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #4c4e5b;
+    }
+
+    &:hover {
+      background-color: $accent;
+    }
+
+    &--active {
+      background-color: $accent;
+    }
+  }
+}
