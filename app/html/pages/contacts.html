@@ -48,33 +48,32 @@
               <li class="contacts__item contacts__item--phone">
                 <span>Наш телефон:</span>
                 <a class="contacts__link animation" href="tel:+30995263333">
-                  098-526-44-44</a>
+                  099-526-44-44</a>
               </li>
 
-              <ul class="contacts__list">
+                <li class="contacts__item contacts__item--phone">
+                  <span>Наш телефон:</span>
+                  <a class="contacts__link animation" href="tel:+30995263333">
+                    098-526-44-44</a>
+                </li>
+
                 <li class="contacts__item contacts__item--phone">
                   <span>Наш телефон:</span>
                   <a class="contacts__link animation" href="tel:+30995263333">
                     073-526-44-44</a>
                 </li>
 
-                <ul class="contacts__list">
-                  <li class="contacts__item contacts__item--phone">
-                    <span>Наш телефон:</span>
-                    <a class="contacts__link animation" href="tel:+30995263333">
-                      099-526-44-44</a>
-                  </li>
-
-              <li class="contacts__item contacts__item--adress">
-                <span>Наш адрес:</span>
-                <a class="contacts__link animation" href="https://goo.gl/maps/xbfn6VLXgeqw78yv6" target="_blank">г.
-                  Горское ул. Советская, 5</a>
-              </li>
-            </ul>
+                <li class="contacts__item contacts__item--adress">
+                  <span>Наш адрес:</span>
+                  <a class="contacts__link animation" href="https://goo.gl/maps/xbfn6VLXgeqw78yv6" target="_blank">г.
+                    Горское ул. Советская, 5</a>
+                </li>
+              </ul>
           </address>
 
           <div class="contacts__wrapper">
 
+            @include('../components/_select.html')
 
             <div class="contacts__inner">
 
@@ -83,19 +82,16 @@
               </svg>
 
               <h2 class="contacts__subtitle">Желаете забронировать столик в нашем ресторане?</h2>
+
+              <div class="contacts__text">
+                <p>Если вы решили выбраться в наш ресторан на ужин, стоит быть готовым к тому, что свободных мест может
+                  не оказаться :( Чаще всего необходимость брони возникает вечером в пятницу или в выходные. В таком
+                  случае рукомендуем Вам помнить о возможности резерва столика в ресторане заранее. </p>
+              </div>
             </div>
-
-            @include('../components/_select.html')
-
           </div>
-
-
-
-
         </div>
-
       </section>
-
 
     </main>
 
