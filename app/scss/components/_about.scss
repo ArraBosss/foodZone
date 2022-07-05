@@ -1,0 +1,60 @@
+.about {
+  padding-bottom: 60px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__advantages {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  &__item {
+    color: $accent;
+  }
+
+  &__text {
+    max-width: 600px;
+
+    p {
+      font-size: 16px;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__img {
+    width: 405px;
+    height: 545px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &--cook {
+      background-image: url('..//../images/decor/cook.jpg');
+    }
+
+    &--delivery {
+      background-image: url('..//../images/decor/deliveryman.jpg');
+    }
+
+    &--client {
+      background-image: url('..//../images/decor/client.jpg');
+    }
+    &--discount {
+      background-image: url('..//../images/decor/discount.jpg');
+    }
+  }
+
+
+}

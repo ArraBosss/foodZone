@@ -42,8 +42,7 @@ body {
 }
 
 .section {
-  padding-bottom: 60px;
-  text-align: center;
+  padding-top: 60px;
 }
 
 .animation {
@@ -99,7 +98,7 @@ body {
 
 .button-nav {
   display: inline-block;
-  padding: 5px 25px;
+  padding: 5px 20px;
   border: 3px solid $accent;
   border-radius: 50px;
   color: $white;
@@ -125,9 +124,30 @@ body {
 
 .title {
   margin-bottom: 60px;
+  text-align: center;
   font-size: 40px;
   font-weight: 500;
   line-height: 1.2;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 ::-webkit-calendar-picker-indicator {
@@ -147,7 +167,6 @@ body {
   border-radius: 15px;
   background-color: #356184;
 }
-
 
 .form__list::-webkit-scrollbar {
   width: 3px;

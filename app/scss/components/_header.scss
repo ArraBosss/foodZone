@@ -1,0 +1,119 @@
+.header {
+  padding-top: 30px;
+
+  &__menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+  }
+}
+
+.menu {
+  display: flex;
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+}
+
+.sub-menu {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  left: 0;
+  top: 45px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s;
+
+  &__list {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $card;
+    border-radius: 10px 10px 50px 50px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+
+    svg {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+      fill: $white;
+      transition: fill 0.5s;
+    }
+
+    &:hover {
+      svg {
+        fill: $accent;
+      }
+    }
+  }
+}
+
+.down {
+  max-height: 150px
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+
+    svg {
+      fill: white;
+    }
+
+    &--search {
+      svg {
+        width: 25px;
+        height: 25px;
+
+      }
+    }
+
+    &--cart {
+      svg {
+        width: 22px;
+        height: 25px;
+      }
+    }
+  }
+
+  &__num {
+    position: absolute;
+    bottom: -2px;
+    right: -7px;
+    padding: 1px 5px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 10px;
+    color: $white;
+    background-color: $accent;
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Zone | Главная</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    @include('../components/_header.html')
+
+    <main class="main">
+
+      <div class="bread-crumbs">
+        <div class="container">
+          <ul class="bread-crumbs__list">
+
+            <li class="bread-crumbs__item">
+              <a class="bread-crumbs__link animation" href="index.html">
+                Главная
+              </a>
+            </li>
+
+            <li class="bread-crumbs__item">
+              <a class="bread-crumbs__link">
+                Контакты
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <section class="contacts">
+
+        <div class="container">
+
+          <address class="contacts__content">
+            <h2 class="contacts__title title">
+              Наши контакты
+            </h2>
+            <ul class="contacts__list">
+              <li class="contacts__item contacts__item--phone">
+                <span>Наш телефон:</span>
+                <a class="contacts__link animation" href="tel:+30995263333">
+                  098-526-44-44</a>
+              </li>
+
+              <ul class="contacts__list">
+                <li class="contacts__item contacts__item--phone">
+                  <span>Наш телефон:</span>
+                  <a class="contacts__link animation" href="tel:+30995263333">
+                    073-526-44-44</a>
+                </li>
+
+                <ul class="contacts__list">
+                  <li class="contacts__item contacts__item--phone">
+                    <span>Наш телефон:</span>
+                    <a class="contacts__link animation" href="tel:+30995263333">
+                      099-526-44-44</a>
+                  </li>
+
+              <li class="contacts__item contacts__item--adress">
+                <span>Наш адрес:</span>
+                <a class="contacts__link animation" href="https://goo.gl/maps/xbfn6VLXgeqw78yv6" target="_blank">г.
+                  Горское ул. Советская, 5</a>
+              </li>
+            </ul>
+          </address>
+
+          <div class="contacts__wrapper">
+
+
+            <div class="contacts__inner">
+
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-reception"></use>
+              </svg>
+
+              <h2 class="contacts__subtitle">Желаете забронировать столик в нашем ресторане?</h2>
+            </div>
+
+            @include('../components/_select.html')
+
+          </div>
+
+
+
+
+        </div>
+
+      </section>
+
+
+    </main>
+
+    @include('../components/_footer.html')
+
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
