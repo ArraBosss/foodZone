@@ -15,3 +15,17 @@ const swiper = new Swiper('.slider', {
     disableOnInteraction: false,
   },
 });
+
+
+const swiperStock = new Swiper('.stock-slider', {
+  loop: true,
+  slidesPerView:3,
+  spaceBetween: 45,
+
+  navigation: {
+    nextEl: '.stock-slider__next',
+    prevEl: '.stock-slider__prev'
+  },
+
+  
+});
