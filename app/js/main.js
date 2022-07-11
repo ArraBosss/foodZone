@@ -19,8 +19,8 @@ menuClick.addEventListener('click', (e) => {
 
 
 
-const menuClientHeight = document.getElementById('sub-menu').clientHeight,
-menuLink = document.querySelector('.sub-menu__link');
+// const menuClientHeight = document.getElementById('sub-menu').clientHeight,
+// menuLink = document.querySelector('.sub-menu__link');
 
 
 // if (menuClientHeight > 0) {
@@ -31,9 +31,10 @@ menuLink = document.querySelector('.sub-menu__link');
 //   });
 // }
 
-if (menuClientHeight <= 0) {
-  menuLink.tabIndex = -1;
-} else {
-  menuLink.tabIndex = 1;
-}
+// if (menuClientHeight <= 0) {
+//   menuLink.tabIndex = -1;
+// } else {
+//   menuLink.tabIndex = 1;
+// }
+
     

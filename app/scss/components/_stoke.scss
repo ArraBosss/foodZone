@@ -1,0 +1,31 @@
+.stock {
+  padding-bottom: 60px;
+}
+
+.stock-slider {
+  max-width: 1170px;
+
+  &__arrows {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__img {
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+
+  &__prev,
+  &__next {
+    position: static;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+
+  &__prev::after,
+  &__next::after {
+    font-size: 14px;
+    font-weight: 900;
+  }
+}
