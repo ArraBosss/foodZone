@@ -50,7 +50,7 @@ function scripts() {
             'app/js/select.js',
             'app/js/phoneinput.js',
             'node_modules/swiper/swiper-bundle.min.js',
-            'app/js/slider.js',
+            'app/js/sliders.js',
             'app/js/main.js'  
         ])
         .pipe(concat('main.min.js'))

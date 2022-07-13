@@ -223,30 +223,36 @@
   }
 }
 
-
-
-
-
 :root {
   --swiper-theme-color: #FFFFFF;
 }
 
 .slider {
-  max-width: 545px;
-  border-radius: 10px;
+  position: relative;
 
-  &__prev {
+  &__swiper {
+    max-width: 545px;
+    border-radius: 10px;
+  }
+
+  &__prev { 
+    left: 0;
     padding-right: 2px;
+    transform: translate(-50%, -50%);
   }
 
   &__next {
+    right: 0;
     padding-left: 2px;
+    transform: translate(50%, -50%);
   }
 
   &__prev,
   &__next {
+    position: absolute;
     width: 44px;
     height: 44px;
+    margin-top: 0;
     border-radius: 100%;
     background-color: #2E2F37;
   }
