@@ -11,17 +11,16 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 document.querySelectorAll('.form__select').forEach(function (dropDownWrapper) {
 
   const dropDownBtn = dropDownWrapper.querySelector('.form__button'),
-    dropDownList = dropDownWrapper.querySelector('.form__wrapper'),
-    dropDownListItems = dropDownList.querySelectorAll('.form__option'),
-    dropDownInput = dropDownWrapper.querySelector('.form__time'),
-    dropDownCurrent = dropDownWrapper.querySelector('.form__current');
+        dropDownList = dropDownWrapper.querySelector('.form__wrapper'),
+        dropDownListItems = dropDownList.querySelectorAll('.form__option'),
+        dropDownInput = dropDownWrapper.querySelector('.form__time'),
+        dropDownCurrent = dropDownWrapper.querySelector('.form__current');
 
 
   dropDownBtn.addEventListener('click', () => {
     dropDownList.classList.toggle('form__wrapper--active');
     dropDownBtn.classList.toggle('form__button--active');
   });
-
 
   dropDownListItems.forEach(function (listItem) {
     listItem.addEventListener('click', function (e) {
