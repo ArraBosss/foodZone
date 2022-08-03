@@ -18,8 +18,15 @@ const swiperMain = new Swiper('.slider__swiper', {
 
 const swiperStock = new Swiper('.stock-slider', {
   loop: true,
-  slidesPerView:3,
-  spaceBetween: 45,
+  slidesPerView:1,
+  spaceBetween: 30,
+
+  breakpoints: {  
+    769: {
+      slidesPerView: 3,
+
+    }
+  },
 
   navigation: {
     nextEl: '.stock-slider__next',

@@ -1,0 +1,206 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  overflow-y: scroll;
+
+  &__wrapper {
+    margin: 40px 0;
+  }
+}
+
+.modal-product {
+  margin: auto;
+  z-index: 100;
+  border-radius: 15px;
+  background-color: $card;
+  max-width: 1170px;
+  width: 100%;
+  padding: 40px;
+
+
+  &__close {
+    position: absolute;
+    color: $white;
+    right: 0;
+    top: 0;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-bottom: -3px;
+      fill: $white;
+      transition: fill 0.5s, background-color 0.5s;
+
+      &:hover {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    max-width: 550px;
+  }
+
+  &__img {
+    margin-right: 30px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  &__description {
+    margin-bottom: 15px;
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  &__sum {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+
+  &__btn {
+    width: 30px;
+    height: 30px;
+    margin-bottom: -3px;
+    fill: $white;
+    transition: fill 0.5s, background-color 0.5s;
+    background-color: $accent;
+    border-radius: 50%;
+
+    &:hover {
+      fill: $accent;
+      background-color: $white;
+    }
+  }
+
+  &__current {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+}
+
+.ingredients {
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  &__wrapper {
+    margin-bottom: 40px;
+    max-height: 250px;
+    overflow: auto;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 35px;
+    grid-row-gap: 15px;
+    margin-right: 20px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__general {
+    font-weight: 500;
+  }
+
+  &__name {
+    margin-left: 5px;
+  }
+
+  &__amount {
+    margin-right: 3px;
+  }
+
+  &__delete {
+    svg {
+      width: 10px;
+      height: 10px;
+      margin-bottom: -1px;
+      fill: $white;
+    }
+  }
+}
+
+.modal-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  height: 100%;
+  padding: 0 20px 20px;
+
+  &::after {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 65px);
+    background: #282930;
+    border-radius: 15px;
+  }
+
+  &__wrapper {
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    align-self: center;
+    transition: transform 0.7s;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    font-size: 20;
+    line-height: 1.2;
+    @include line-clamp(2);
+    flex: 1;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__price {
+    font-size: 17px;
+    line-height: 1.2;
+  }
+}
