@@ -5,16 +5,15 @@
       <div class="form__col form__col--top">
         <label class="form__label" for="name">
           <span class="form__span">Ваше имя</span>
-          <input class="form__input form__input--top" id="name" type="text" placeholder="Введите имя"
-            required>
+          <input class="form__input form__input--top" id="name" type="text" placeholder="Введите имя" required>
         </label>
       </div>
 
       <div class="form__col form__col--top">
         <label class="form__label" for="phone">
           <span class="form__span">Телефон</span>
-          <input class="form__input form__input--top" id="phone" type="tel" data-tel-input
-            placeholder="Ваш номер" maxlength="18">
+          <input class="form__input form__input--top" id="phone" type="tel" data-tel-input placeholder="Ваш номер"
+            maxlength="18">
         </label>
       </div>
     </div>
@@ -30,43 +29,41 @@
         <span class="form__span">Время</span>
         <input class="form__time" type="text" name="select-time" value="10:00" style="display: none;">
 
-        <div class="form__button form__input form__input--bottom" >
-          <span class="form__current">10:00</span>
-          <div class="form__wrapper">
-            <ul class="form__list">
-              <li class="form__option" data-value="10:00">10:00</li>
-              <li class="form__option" data-value="10:30">10:30</li>
-              <li class="form__option" data-value="11:00">11:00</li>
-              <li class="form__option" data-value="11:30">11:30</li>
-              <li class="form__option" data-value="12:00">12:00</li>
-              <li class="form__option" data-value="12:30">12:30</li>
-              <li class="form__option" data-value="13:00">13:00</li>
-              <li class="form__option" data-value="13:30">13:30</li>
-              <li class="form__option" data-value="14:00">14:00</li>
-              <li class="form__option" data-value="14:30">14:30</li>
-              <li class="form__option" data-value="15:00">15:00</li>
-              <li class="form__option" data-value="15:30">15:30</li>
-              <li class="form__option" data-value="16:00">16:00</li>
-              <li class="form__option" data-value="16:30">16:30</li>
-              <li class="form__option" data-value="17:00">17:00</li>
-              <li class="form__option" data-value="17:30">17:30</li>
-              <li class="form__option" data-value="18:00">18:00</li>
-              <li class="form__option" data-value="18:30">18:30</li>
-              <li class="form__option" data-value="19:00">19:00</li>
-              <li class="form__option" data-value="19:30">19:30</li>
-              <li class="form__option" data-value="20:00">20:00</li>
-              <li class="form__option" data-value="20:30">20:30</li>
-              <li class="form__option" data-value="21:00">21:00</li>
-            </ul>
-          </div>
+        <button type="button" class="form__button form__input form__input--bottom">10:00</button>
+        <div class="form__wrapper">
+          <ul class="form__list">
+            <li class="form__option" data-value="10:00">10:00</li>
+            <li class="form__option" data-value="10:30">10:30</li>
+            <li class="form__option" data-value="11:00">11:00</li>
+            <li class="form__option" data-value="11:30">11:30</li>
+            <li class="form__option" data-value="12:00">12:00</li>
+            <li class="form__option" data-value="12:30">12:30</li>
+            <li class="form__option" data-value="13:00">13:00</li>
+            <li class="form__option" data-value="13:30">13:30</li>
+            <li class="form__option" data-value="14:00">14:00</li>
+            <li class="form__option" data-value="14:30">14:30</li>
+            <li class="form__option" data-value="15:00">15:00</li>
+            <li class="form__option" data-value="15:30">15:30</li>
+            <li class="form__option" data-value="16:00">16:00</li>
+            <li class="form__option" data-value="16:30">16:30</li>
+            <li class="form__option" data-value="17:00">17:00</li>
+            <li class="form__option" data-value="17:30">17:30</li>
+            <li class="form__option" data-value="18:00">18:00</li>
+            <li class="form__option" data-value="18:30">18:30</li>
+            <li class="form__option" data-value="19:00">19:00</li>
+            <li class="form__option" data-value="19:30">19:30</li>
+            <li class="form__option" data-value="20:00">20:00</li>
+            <li class="form__option" data-value="20:30">20:30</li>
+            <li class="form__option" data-value="21:00">21:00</li>
+          </ul>
         </div>
       </div>
 
       <div class="form__col form__col--bottom">
         <label class="form__label" for="amount">
           <span class="form__span">Кол-во гостей</span>
-          <input class="form__input form__input--bottom" id="amount" type="number" max="20" placeholder="2" autocomplete="off"
-            required>
+          <input class="form__input form__input--bottom" id="amount" type="number" min="1" max="20" placeholder="2"
+            autocomplete="off" required>
         </label>
       </div>
     </div>

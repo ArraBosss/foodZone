@@ -1,9 +1,9 @@
 @import 'components/reset';
+@import 'components/mixin';
 @import 'components/vars';
 @import 'components/fonts';
 @import 'components/global';
 @import 'components/libs';
-@import 'components/mixin';
 @import 'components/header';
 @import 'components/select';
 @import 'components/bread-crumbs';
@@ -11,6 +11,7 @@
 @import 'components/contacts';
 @import 'components/about';
 @import 'components/stoke';
+@import 'components/modal';
 @import 'components/page-404';
 
 
@@ -26,8 +27,11 @@
     align-items: center;
   }
 
-  &__title {
+  &__content {
     max-width: 530px;
+  }
+
+  &__title {
     margin-bottom: 50px;
     font-weight: 500;
     font-size: 45px;
@@ -64,8 +68,9 @@
 
   &__parallax {
     position: relative;
-    width: 600px;
-    height: 600px;
+    object-fit: cover;
+    max-width: 600px;
+    max-height: 600px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -124,11 +129,7 @@
   }
 }
 
-.sets,
-.rolls,
-.burgers {
-  display: none;
-}
+
 
 .product-card {
   position: relative;
@@ -148,7 +149,7 @@
     left: 0;
     width: 100%;
     height: calc(100% - 125px);
-    background: #1b1c21;
+    background: $card;
     border-radius: 15px;
   }
 
@@ -163,6 +164,9 @@
   }
 
   &__img {
+    max-width: 240px;
+    min-height: 240px;
+    object-fit: cover;
     margin-bottom: 10px;
     transition: transform 0.7s;
 
@@ -184,6 +188,7 @@
     margin-bottom: 20px;
     text-align: left;
     font-size: 20px;
+    line-height: 1.2;
     @include line-clamp(2);
   }
 
