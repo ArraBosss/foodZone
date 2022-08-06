@@ -2,36 +2,57 @@
   padding-top: 30px;
 
   &__menu {
-    // position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
 
+.logo {
+
+  &__img {
+    @include mq('tablet-2') {
+      width: 120px;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  z-index: -99;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: background-color 0.7s ease;
+
+
+  &--active {
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
 
 
 .menu {
 
   @include mq('tablet-2') {
-    
-    height: calc(100% + 1px);
-    width: 100%;
     position: absolute;
+    z-index: 11;
+    height: calc(100% + 1px);
+    width: 90%;
     top: 0;
     left: 0;
-    transition: background-color 0.7s ease;
-    
-    &--active {
-      z-index: 10;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
+    transition: transform 0.7s ease;
+    transform: translateX(-200%);
+  }
+
+  &--active {
+    transform: translateX(0);
   }
 
   &__logo {
 
-
-    // max-width: 140px;
     @include mq('tablet-2') {
       display: inline-block;
     }
@@ -42,27 +63,20 @@
 
     @include mq('tablet-2') {
       flex-direction: column;
-      position: absolute;
-      top: 0;
-      left: 0;
       height: 100%;
       overflow: auto;
-      width: 90%;
+      width: 100%;
       background-color: $card;
-      transform: translateX(-200%);
-      transition: transform 0.7s;
+    }
 
-      &--active {
-        transform: translateX(0);
-      }
+    &--active {
+      transform: translateX(0);
     }
   }
 
   &__item {
 
-    @include mq('tablet-2') {
-      padding: 15px 22px;
-    }
+    
 
     &:last-child,
     &:first-child {
@@ -97,21 +111,27 @@
       }
     }
 
-    &--sub {
-      position: relative;
+    &:nth-last-child(2) {
+      margin-right: 0;
+    }
 
-      &::after {
-        position: absolute;
-        content: '';
-        background-image: url('../images/icons/icon-drop.svg');
-        width: 12px;
-        height: 7px;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 20px;
-        background-repeat: no-repeat;
-        opacity: 0.5;
-        transition: all 0.2s;
+    &--sub {
+
+      @include mq('tablet-2') {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '';
+          background-image: url('../images/icons/icon-drop.svg');
+          width: 12px;
+          height: 7px;
+          top: 25px;
+          right: 20px;
+          background-repeat: no-repeat;
+          opacity: 0.5;
+          transition: all 0.2s;
+        }
       }
     }
   }
@@ -121,6 +141,7 @@
 
     @include mq('tablet-2') {
       display: block;
+      padding: 15px 22px;
     }
   }
 
@@ -131,15 +152,23 @@
   }
 }
 
+
 .sub-menu {
   position: absolute;
   z-index: 2;
   right: 0;
   left: 0;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
   top: 70px;
   max-height: 0;
   overflow: hidden;
   transition: all .5s;
+
+  @include mq('tablet-2') {
+    position: static;
+  }
 
   &__list {
     padding: 20px 0;
@@ -148,11 +177,23 @@
     justify-content: center;
     background-color: $card;
     border-radius: 10px 10px 50px 50px;
+
+    @include mq('tablet-2') {
+      justify-content: start;
+      padding: 15px 22px;
+      border-top: 1px solid #4C4E5B;
+      overflow-x: scroll;
+      border-radius: 0;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 50px;
+
+      @include mq('tablet-2') {
+        margin-right: 45px;
+      }
     }
   }
 

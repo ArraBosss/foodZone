@@ -21,26 +21,58 @@
   display: flex;
   align-items: center;
 
+  @include mq('tablet-2') {
+    min-height: calc(100vh - 100px);
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mq('tablet-2') {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
   }
 
   &__content {
     max-width: 530px;
+
+    @include mq('tablet-2') {
+      max-width: 600px;
+    }
   }
 
   &__title {
     margin-bottom: 50px;
     font-weight: 500;
     font-size: 45px;
+    line-height: 1.2;
+
+    @include mq('desktop') {
+      margin-bottom: 25px;
+      font-size: calc(20px + (45 - 20) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    @include mq('tablet-2') {
+      font-size: 45px;
+    }
   }
 
   &__item {
     font-weight: 700;
     font-size: 60px;
+    line-height: 1.2;
     text-transform: uppercase;
+
+    @include mq('desktop') {
+      font-size: calc(20px + (60 - 20) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    @include mq('tablet-2') {
+      font-size: 55px;
+    }
   }
 
   &__text {
@@ -50,6 +82,23 @@
       margin-bottom: 50px;
       font-weight: 500;
       font-size: 25px;
+      line-height: 1.2;
+
+      @include mq('desktop') {
+        font-size: calc(15px + (25 - 15) * ((100vw - 320px) / (1200 - 320)));
+      }
+
+      @include mq('tablet-2') {
+        max-width: 100%;
+        margin-bottom: 30px;
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__nav {
+    &:not(:last-child) {
+      margin-bottom: 20px;
     }
   }
 
@@ -61,9 +110,24 @@
     font-size: 15px;
     text-transform: uppercase;
 
+    @include mq('tablet-2') {
+      width: 100%;
+    }
+
     &:not(:last-child) {
       margin-right: 20px;
+
+      @include mq('tablet-2') {
+        margin-right: 0;
+        margin-bottom: 25px;
+      }
     }
+
+    // &--visit {
+    //   @include mq('tablet-2') {
+    //     display: none;
+    //   }
+    // }
   }
 
   &__parallax {
@@ -74,6 +138,11 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include mq('tablet') {
+      max-width: 550px;
+      max-height: 550px;
+    }
   }
 
   &__img {
@@ -128,8 +197,6 @@
     margin-bottom: 60px;
   }
 }
-
-
 
 .product-card {
   position: relative;
@@ -240,7 +307,7 @@
     border-radius: 10px;
   }
 
-  &__prev { 
+  &__prev {
     left: 0;
     padding-right: 2px;
     transform: translate(-50%, -50%);
