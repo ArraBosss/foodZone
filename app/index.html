@@ -19,6 +19,8 @@
 <body>
   <div class="wrapper">
 
+    <div class="overlay"></div>
+
     <header class="header">
 
   <div class="container">
@@ -29,9 +31,6 @@
       </a>
 
       <div class="menu">
-
-
-
         <ul class="menu__list">
 
           <li class="menu__item">
@@ -41,15 +40,15 @@
 
           </li>
 
-
           <li class="menu__item">
             <a class="menu__link animation" href="stock.html">Акции</a>
           </li>
+
           <li class="menu__item menu__item--sub">
             <a class="menu__link menu__link--click animation" href="#">Меню</a>
 
             <div class="sub-menu" id="sub-menu">
-              <div class="container">
+              
                 <ul class="sub-menu__list">
                   <li class="sub-menu__item">
                     <a class="sub-menu__link animation" href="#">
@@ -124,7 +123,7 @@
                     </a>
                   </li>
                 </ul>
-              </div>
+              
             </div>
           </li>
           <li class="menu__item">
@@ -144,9 +143,10 @@
             </button>
           </li>
         </ul>
-
-       
       </div>
+
+
+
 
 
       <div class="user-nav">
@@ -188,135 +188,15 @@
             <span class="burger__line"></span>
           </button>
         </div>
+        
       </div>
     </nav>
-
-
-    <!-- <div class="overlay">
-
-      <div class="side-nav">
-
-        <div class="side-nav__top">
-          <a class="side-nav__logo animation" href="index.html">
-            <img class="side-nav__img logo__img" src="images/icons/logo.svg" alt="Логотип">
-          </a>
-        </div>
-
-
-        <ul class="menu side-nav__menu">
-          <li class="menu__item side-nav__item">
-            <a class="menu__link animation" href="stock.html">Акции</a>
-          </li>
-          <li class="menu__item menu__item--sub side-nav__item side-nav__item--sub">
-            <a class="menu__link menu__link--click animation">Меню</a>
-
-            <div class="sub-menu side-nav__sub">
-              <ul class="sub-menu__list">
-                <li class="sub-menu__item">
-                  <a class="sub-menu__link animation" href="#">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#icon-pizza"></use>
-                    </svg>
-                    <span class="sub-menu__name">Пицца</span>
-                  </a>
-                </li>
-                <li class="sub-menu__item">
-                  <a class="sub-menu__link animation" href="#">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#icon-set"></use>
-                    </svg>
-                    Сеты
-                  </a>
-                </li>
-                <li class="sub-menu__item">
-                  <a class="sub-menu__link animation" href="#">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#icon-roll"></use>
-                    </svg>
-                    <span class="sub-menu__name">Роллы</span>
-                  </a>
-                </li>
-                <li class="sub-menu__item">
-                  <a class="sub-menu__link animation" href="#">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#icon-burger"></use>
-                    </svg>
-                    <span class="sub-menu__name">Бургеры</span>
-                  </a>
-                </li>
-                <li class="sub-menu__item">
-                  <a class="sub-menu__link animation" href="#">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#icon-pasta"></use>
-                    </svg>
-                    <span class="sub-menu__name">Паста</span>
-                  </a>
-                </li>
-                <li class="sub-menu__item">
-                  <a class="sub-menu__link animation" href="#">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#icon-salad"></use>
-                    </svg>
-                    <span class="sub-menu__name">Салаты</span>
-                  </a>
-                </li>
-                <li class="sub-menu__item">
-                  <a class="sub-menu__link animation" href="#">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#icon-snack"></use>
-                    </svg>
-                    <span class="sub-menu__name">Снэки</span>
-                  </a>
-                </li>
-                <li class="sub-menu__item">
-                  <a class="sub-menu__link animation" href="#">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#icon-cake"></use>
-                    </svg>
-                    <span class="sub-menu__name">Десерты</span>
-                  </a>
-                </li>
-                <li class="sub-menu__item">
-                  <a class="sub-menu__link animation" href="#">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#icon-drink"></use>
-                    </svg>
-                    <span class="sub-menu__name">Напитки</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="menu__item side-nav__item">
-            <a class="menu__link animation" href="delivery.html">Доставка</a>
-          </li>
-          <li class="menu__item side-nav__item">
-            <a class="menu__link animation" href="contacts.html">Контакты</a>
-          </li>
-          <li class="menu__item side-nav__item">
-            <a class="menu__link animation" href="about.html">О нас</a>
-          </li>
-        </ul>
-        <div class="side-nav__inner">
-
-
-          <button class="side-nav__btn button-nav" type="button">
-            Вход
-            <span class="sr-only">Кнопка входа в аккаунт</span>
-          </button>
-        </div>
-
-
-
-      </div>
-    </div> -->
-
-
   </div>
 </header>
 
     <main class="main">
-      <!-- <section class="hero">
+
+      <section class="hero">
         <div class="container">
           <div class="hero__wrapper">
             <div class="hero__content">
@@ -336,43 +216,31 @@
 
               <a class="hero__btn button" href="#">Заказать сейчас</a>
 
-              <a class="hero__btn button-nav" href="#">Посетить ресторан</a>
+              <button class="hero__btn button-nav" href="#">Посетить ресторан</button>
+
             </div>
 
             <div class="hero__parallax" style="background-image: url('../images/decor/background-hero.png')">
 
               <img max-width="600" max-height="600" src="images/decor/hero-img.png" alt="Настоящая итальянская пицца">
 
-              <img class="hero__img" src="images/decor/leaf-1.png" data-speed="-3"
-                alt="Летающий листочек">
-              <img class="hero__img" src="images/decor/leaf-2.png" data-speed="2"
-                alt="Летающий листочек">
-              <img class="hero__img" src="images/decor/leaf-3.png" data-speed="1"
-                alt="Летающий листочек">
-              <img class="hero__img" src="images/decor/leaf-4.png" data-speed="2"
-                alt="Летающий листочек">
-              <img class="hero__img" src="images/decor/leaf-5.png" data-speed="1"
-                alt="Летающий листочек">
-              <img class="hero__img" src="images/decor/leaf-6.png" data-speed="-2"
-                alt="Летающий листочек">
-              <img class="hero__img" src="images/decor/cherry-1.png" data-speed="3"
-                alt="Летающий помидорчик">
-              <img class="hero__img" src="images/decor/cherry-2.png" data-speed="-1"
-                alt="Летающий помидорчик">
-              <img class="hero__img" src="images/decor/cherry-3.png" data-speed="-1"
-                alt="Летающий помидорчик">
-              <img class="hero__img" src="images/decor/cherry-4.png" data-speed="-1"
-                alt="Летающий помидорчик">
-              <img class="hero__img" src="images/decor/cherry-5.png" data-speed="2"
-                alt="Летающий помидорчик">
-              <img class="hero__img" src="images/decor/mushroom.png" data-speed="-2"
-                alt="Летающий грибочек">
-              <img class="hero__img" src="images/decor/pepper.png" data-speed="1"
-                alt="Летающий перчик">
+              <img class="hero__img" src="images/decor/leaf-1.png" data-speed="-3" alt="Летающий листочек">
+              <img class="hero__img" src="images/decor/leaf-2.png" data-speed="2" alt="Летающий листочек">
+              <img class="hero__img" src="images/decor/leaf-3.png" data-speed="1" alt="Летающий листочек">
+              <img class="hero__img" src="images/decor/leaf-4.png" data-speed="2" alt="Летающий листочек">
+              <img class="hero__img" src="images/decor/leaf-5.png" data-speed="1" alt="Летающий листочек">
+              <img class="hero__img" src="images/decor/leaf-6.png" data-speed="-2" alt="Летающий листочек">
+              <img class="hero__img" src="images/decor/cherry-1.png" data-speed="3" alt="Летающий помидорчик">
+              <img class="hero__img" src="images/decor/cherry-2.png" data-speed="-1" alt="Летающий помидорчик">
+              <img class="hero__img" src="images/decor/cherry-3.png" data-speed="-1" alt="Летающий помидорчик">
+              <img class="hero__img" src="images/decor/cherry-4.png" data-speed="-1" alt="Летающий помидорчик">
+              <img class="hero__img" src="images/decor/cherry-5.png" data-speed="2" alt="Летающий помидорчик">
+              <img class="hero__img" src="images/decor/mushroom.png" data-speed="-2" alt="Летающий грибочек">
+              <img class="hero__img" src="images/decor/pepper.png" data-speed="1" alt="Летающий перчик">
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <!-- <section class="kitchen">
         <div class="container">
@@ -1647,7 +1515,7 @@
         </div>
       </section>
 
-      <section class="order section">
+      <section id="order" class="order section">
         <div class="container">
           <h2 class="order__title title">Желаете забронировать столик?</h2>
 

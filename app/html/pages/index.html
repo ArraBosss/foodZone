@@ -19,10 +19,13 @@
 <body>
   <div class="wrapper">
 
+    <div class="overlay"></div>
+
     @include('../components/_header.html')
 
     <main class="main">
-      <!-- <section class="hero">
+
+      <section class="hero">
         <div class="container">
           <div class="hero__wrapper">
             <div class="hero__content">
@@ -42,43 +45,31 @@
 
               <a class="hero__btn button" href="#">Заказать сейчас</a>
 
-              <a class="hero__btn button-nav" href="#">Посетить ресторан</a>
+              <button class="hero__btn button-nav" href="#">Посетить ресторан</button>
+
             </div>
 
             <div class="hero__parallax" style="background-image: url('../images/decor/background-hero.png')">
 
               <img max-width="600" max-height="600" src="images/decor/hero-img.png" alt="Настоящая итальянская пицца">
 
-              <img class="hero__img" src="images/decor/leaf-1.png" data-speed="-3"
-                alt="Летающий листочек">
-              <img class="hero__img" src="images/decor/leaf-2.png" data-speed="2"
-                alt="Летающий листочек">
-              <img class="hero__img" src="images/decor/leaf-3.png" data-speed="1"
-                alt="Летающий листочек">
-              <img class="hero__img" src="images/decor/leaf-4.png" data-speed="2"
-                alt="Летающий листочек">
-              <img class="hero__img" src="images/decor/leaf-5.png" data-speed="1"
-                alt="Летающий листочек">
-              <img class="hero__img" src="images/decor/leaf-6.png" data-speed="-2"
-                alt="Летающий листочек">
-              <img class="hero__img" src="images/decor/cherry-1.png" data-speed="3"
-                alt="Летающий помидорчик">
-              <img class="hero__img" src="images/decor/cherry-2.png" data-speed="-1"
-                alt="Летающий помидорчик">
-              <img class="hero__img" src="images/decor/cherry-3.png" data-speed="-1"
-                alt="Летающий помидорчик">
-              <img class="hero__img" src="images/decor/cherry-4.png" data-speed="-1"
-                alt="Летающий помидорчик">
-              <img class="hero__img" src="images/decor/cherry-5.png" data-speed="2"
-                alt="Летающий помидорчик">
-              <img class="hero__img" src="images/decor/mushroom.png" data-speed="-2"
-                alt="Летающий грибочек">
-              <img class="hero__img" src="images/decor/pepper.png" data-speed="1"
-                alt="Летающий перчик">
+              <img class="hero__img" src="images/decor/leaf-1.png" data-speed="-3" alt="Летающий листочек">
+              <img class="hero__img" src="images/decor/leaf-2.png" data-speed="2" alt="Летающий листочек">
+              <img class="hero__img" src="images/decor/leaf-3.png" data-speed="1" alt="Летающий листочек">
+              <img class="hero__img" src="images/decor/leaf-4.png" data-speed="2" alt="Летающий листочек">
+              <img class="hero__img" src="images/decor/leaf-5.png" data-speed="1" alt="Летающий листочек">
+              <img class="hero__img" src="images/decor/leaf-6.png" data-speed="-2" alt="Летающий листочек">
+              <img class="hero__img" src="images/decor/cherry-1.png" data-speed="3" alt="Летающий помидорчик">
+              <img class="hero__img" src="images/decor/cherry-2.png" data-speed="-1" alt="Летающий помидорчик">
+              <img class="hero__img" src="images/decor/cherry-3.png" data-speed="-1" alt="Летающий помидорчик">
+              <img class="hero__img" src="images/decor/cherry-4.png" data-speed="-1" alt="Летающий помидорчик">
+              <img class="hero__img" src="images/decor/cherry-5.png" data-speed="2" alt="Летающий помидорчик">
+              <img class="hero__img" src="images/decor/mushroom.png" data-speed="-2" alt="Летающий грибочек">
+              <img class="hero__img" src="images/decor/pepper.png" data-speed="1" alt="Летающий перчик">
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <!-- <section class="kitchen">
         <div class="container">
@@ -1353,7 +1344,7 @@
         </div>
       </section>
 
-      <section class="order section">
+      <section id="order" class="order section">
         <div class="container">
           <h2 class="order__title title">Желаете забронировать столик?</h2>
 

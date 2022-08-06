@@ -22,7 +22,7 @@ const swiperStock = new Swiper('.stock-slider', {
   spaceBetween: 30,
 
   breakpoints: {  
-    769: {
+    993: {
       slidesPerView: 3,
 
     }
