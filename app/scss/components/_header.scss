@@ -17,30 +17,13 @@
   }
 }
 
-.overlay {
-  position: absolute;
-  z-index: -99;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  transition: background-color 0.7s ease;
-
-
-  &--active {
-    z-index: 5;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-}
-
-
 .menu {
 
   @include mq('tablet-2') {
     position: absolute;
     z-index: 11;
     height: calc(100% + 1px);
-    width: 90%;
+    width: 100%;
     top: 0;
     left: 0;
     transition: transform 0.7s ease;
@@ -75,8 +58,6 @@
   }
 
   &__item {
-
-    
 
     &:last-child,
     &:first-child {
@@ -151,7 +132,6 @@
     font-size: 20px;
   }
 }
-
 
 .sub-menu {
   position: absolute;
@@ -259,14 +239,6 @@
     }
   }
 
-  &__wrapper {
-    // width: 40px;
-    // height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   &__btn {
     position: relative;
 
@@ -354,96 +326,3 @@
     }
   }
 }
-
-// .overlay {
-//   z-index: 10;
-//   // position: absolute;
-//   height: calc(100% + 1px);
-//   width: 100%;
-//   top: 0;
-//   left: 0;
-//   transition: background-color 0.7s ease;
-
-//   &--active {
-//     background-color: rgba(0, 0, 0, 0.5);
-//   }
-
-// }
-
-
-// .side-nav {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   height: 100%;
-//   width: 90%;
-//   overflow: auto;
-//   background-color: $card;
-//   transform: translateX(-200%);
-//   transition: transform 0.7s;
-
-//   &--active {
-//     transform: translateX(0);
-//   }
-
-//   &__top {
-//     padding: 32px 0 22px 22px;
-//     border-bottom: 1px solid #4C4E5B;
-//   }
-
-//   &__logo {
-//     display: inline-block;
-//   }
-
-//   &__img {
-//     max-width: 140px;
-//   }
-
-//   &__menu {
-//     display: flex;
-//     flex-direction: column;
-//     margin-bottom: 32px;
-//   }
-
-//   &__item {
-//     padding: 15px 22px;
-//     border-bottom: 1px solid #4C4E5B;
-
-//     &:not(:last-child) {
-//       margin-right: 0px;
-//     }
-
-//     &--sub {
-//       position: relative;
-
-//       &::after {
-//         position: absolute;
-//         content: '';
-//         background-image: url('../images/icons/icon-drop.svg');
-//         width: 12px;
-//         height: 7px;
-//         top: 26px;
-//         right: 20px;
-//         transform: rotate(-90deg);
-//         background-repeat: no-repeat;
-//         opacity: 0.5;
-//         transition: all 0.2s;
-//       }
-//     }
-//   }
-
-//   &__inner {
-//     padding: 0 22px;
-//     text-align: center;
-//   }
-
-//   &__btn {
-//     width: 70%;
-//     padding: 11px;
-//     font-size: 20px;
-
-//     @include mq('phone') {
-//       width: 100%;
-//     }
-//   }
-// }

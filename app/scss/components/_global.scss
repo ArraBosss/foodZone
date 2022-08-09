@@ -12,10 +12,6 @@ body {
   background-color: #14151A;
 }
 
-.lock {
-  overflow: hidden;
-}
-
 .wrapper {
   min-height: 100vh;
   display: flex;
@@ -33,6 +29,10 @@ body {
   padding: 0 15px;
 }
 
+.lock {
+  overflow: hidden;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -44,6 +44,21 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  z-index: -99;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: background-color 0.7s ease;
+
+  &--active {
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .section {
@@ -161,7 +176,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 ::-webkit-scrollbar {
   width: 7px;
-  height: 3px;
+
+  @include mq('tablet-2') {
+    width: 4px;
+    height: 4px;
+  }
 }
 
 ::-webkit-scrollbar-track {
