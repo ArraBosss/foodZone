@@ -14,6 +14,22 @@
   justify-content: space-between;
   margin-bottom: 60px;
 
+  // @include mq('desktop') {
+  //   display: grid;
+  //   grid-template-columns: repeat(auto-fill, 1fr);
+  //   justify-content: space-between;
+  // }
+
+
+  &__content {
+
+    @include mq('desktop') {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+
   &__about {
 
     p {
@@ -126,7 +142,7 @@
 
   &__link {
     color: #828282;
-     font-size: 10px;
+    font-size: 10px;
     border-bottom: 1px solid #828282;
     transition: border-color 0.5s;
 
