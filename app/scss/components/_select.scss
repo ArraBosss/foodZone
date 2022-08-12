@@ -1,18 +1,36 @@
 .order {
   padding-bottom: 60px;
 
+  @include mq('desktop') {
+    padding-bottom: 0;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 0;
+
+    @include mq('desktop') {
+      display: block;
+    }
   }
 
   &__table {
     max-width: 545px;
+    width: 100%;
+
     padding: 35px 25px;
     background-color: $card;
     border-radius: 10px;
+
+    @include mq('desktop') {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    @include mq('tablet-2') {
+      max-width: 100%;
+    }
   }
 
   &__text {
@@ -21,22 +39,47 @@
     text-align: left;
     font-size: 10px;
     opacity: 0.7;
+
+    @include mq('desktop') {
+      text-align: center;
+    }
   }
 
   &__btn {
     width: 100%;
+
+    @include mq('desktop') {
+      width: 70%;
+    }
+
+    @include mq('tablet') {
+      width: 100%;
+    }
+
+    @include mq('phone') {
+      padding: 12px 45px;
+    }
   }
 }
 
 .form {
+  text-align: center;
 
   &__top,
   &__bottom {
     display: flex;
+
+    @include mq('tablet') {
+      flex-direction: column;
+    }
   }
 
   &__col {
     width: 235px;
+
+    @include mq('desktop') {
+      width: 100%;
+    }
 
     &:not(:last-child) {
       margin-right: 25px;
@@ -49,6 +92,10 @@
     &--bottom {
       width: 148px;
       margin-bottom: 30px;
+
+      @include mq('desktop') {
+        width: 100%;
+      }
     }
   }
 
@@ -57,6 +104,7 @@
     margin-bottom: 15px;
     font-weight: 500;
     font-size: 18px;
+    text-align: left;
 
     &::after {
       content: "*";
@@ -87,6 +135,10 @@
     width: 148px;
     text-align: left;
     cursor: pointer;
+
+    @include mq('desktop') {
+      width: 100%;
+    }
 
     &::after {
       position: absolute;
