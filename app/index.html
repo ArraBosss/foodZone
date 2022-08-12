@@ -1519,8 +1519,8 @@
         </div>
       </section>
 
-      <!-- <section id="order" class="order section">
-        <div class="container">
+      <section id="order" class="order section">
+        <div class="container container--resize">
           <h2 class="order__title title">Желаете забронировать столик?</h2>
 
           <div class="order__wrapper">
@@ -1601,35 +1601,148 @@
   </form>
 </div>
 
-            <div class="slider">
+              <div class="slider">
 
-              <div class="slider__swiper swiper">
-                <div class="slider__wrapper swiper-wrapper">
-                  <div class="slider__slide swiper-slide">
-                    <img src="images/decor/slide-1.jpg" width="545" height="400" alt="Фотография нашего интерьера">
+                <div class="slider__swiper swiper">
+                  <div class="slider__wrapper swiper-wrapper">
+                    <div class="slider__slide swiper-slide">
+                      <img src="images/decor/slide-1.jpg" alt="Фотография нашего интерьера">
+                    </div>
+                    <div class="slider__slide swiper-slide">
+                      <img src="images/decor/slide-2.jpg" alt="Фотография нашего интерьера">
+                    </div>
+                    <div class="slider__slide swiper-slide">
+                      <img src="images/decor/slide-3.jpg" alt="Фотография нашего интерьера">
+                    </div>
+                    <div class="slider__slide swiper-slide">
+                      <img src="images/decor/slide-4.jpg" alt="Фотография нашего интерьера">
+                    </div>
                   </div>
-                  <div class="slider__slide swiper-slide">
-                    <img src="images/decor/slide-2.jpg" width="545" height="400" alt="Фотография нашего интерьера">
-                  </div>
-                  <div class="slider__slide swiper-slide">
-                    <img src="images/decor/slide-3.jpg" width="545" height="400" alt="Фотография нашего интерьера">
-                  </div>
-                  <div class="slider__slide swiper-slide">
-                    <img src="images/decor/slide-4.jpg" width="545" height="400" alt="Фотография нашего интерьера">
-                  </div>
+                  <div class="slider__pagination swiper-pagination"></div>
                 </div>
-                <div class="slider__pagination swiper-pagination"></div>
+                <div class="slider__prev swiper-button-prev"></div>
+                <div class="slider__next swiper-button-next"></div>
               </div>
-              <div class="slider__prev swiper-button-prev"></div>
-              <div class="slider__next swiper-button-next"></div>
-            </div>
           </div>
         </div>
-      </section> -->
+      </section>
+
+      
 
     </main>
 
-    
+    <footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+
+      <div class="footer-top__content">
+        <a class="footer-logo" href="#">
+          <img class="footer-logo__img" src="images/icons/logo-footer.svg" alt="Логотип">
+        </a>
+        <div class="footer-top__about">
+          <p>
+            Доставка еды от «Food Zone» позволит получить желаемые блюда для полноценного обеда, ужина или посиделок.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-top__content">
+        <h3 class="footer-top__title">
+          Информация
+        </h3>
+        <ul class="footer-top__list">
+          <li class="footer-top__item">
+            <a class="footer-top__link animation" href="#">Акции</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link animation" href="#">О нас</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link animation" href="#">Доставка</a>
+          </li>
+        </ul>
+      </div>
+
+      <address class="footer-top__content">
+        <h3 class="footer-top__title">
+          Наши контакты
+        </h3>
+        <ul class="footer-top__list">
+          <li class="footer-top__item">
+            <a class="footer-top__link animation" href="https://goo.gl/maps/xbfn6VLXgeqw78yv6" target="_blank">г.
+              Горское ул. Советская, 5</a>
+          </li>
+          
+          <li class="footer-top__item">
+            <span>
+              По вопросам доставки и брони:
+            </span>
+            <a class="footer-top__link animation" href="tel:+30995263333">
+              099-526-44-44</a>
+          </li>
+        </ul>
+      </address>
+
+      <div class="footer-top__content">
+        <h3 class="footer-top__title">
+          Время работы
+        </h3>
+        <ul class="footer-top__list">
+          <li class="footer-top__item">
+            <time class="footer-top__period" datetime="10:00 - 22:00">пн-пт: 10:00-22:00</time>
+          </li>
+          <li class="footer-top__item">
+            <time class="footer-top__period" datetime="10:00 - 22:00">сб-вс: 10:00-23:00</time>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-top__content">
+        <h3 class="footer-top__title">
+          Соц. сети
+        </h3>
+        <ul class="networks">
+          <li class="networks__social">
+            <a class="networks__link networks__link--facebook" target="_blank" href="https://www.facebook.com/">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-facebook"></use>
+              </svg>
+              <span class="sr-only">Мы в Facebook</span>
+            </a>
+          </li>
+          <li class="networks__social">
+            <a class="networks__link networks__link--instagram" target="_blank" href="https://www.instagram.com/">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-instagram"></use>
+              </svg>
+              <span class="sr-only">Мы в Facebook</span>
+            </a>
+          </li>
+          <li class="networks__social">
+            <a class="networks__link networks__link--telegram" target="_blank" href="https://web.telegram.org/z/">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-telegram"></use>
+              </svg>
+              <span class="sr-only">Мы в Facebook</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>
+        © 2022 Food Zone Интернациональная еда в коробочках.
+      </span>
+      <a class="footer-bottom__link" target="_blank" href="https://zakon.rada.gov.ua/laws/show/2297-17#Text">
+        Политика конфиденциальности
+      </a>
+    </div>
+
+  </div>
+</footer>
 
   </div>
 

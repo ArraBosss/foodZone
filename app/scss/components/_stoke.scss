@@ -3,16 +3,17 @@
 }
 
 .stock-slider {
-  max-width: 1170px;
+
 
   &__arrows {
     display: flex;
     justify-content: end;
   }
 
-  &__img {
-    margin-bottom: 10px;
-    object-fit: cover;
+  &__slide {
+    img {
+      object-fit: cover;
+    }
   }
 
   &__prev,

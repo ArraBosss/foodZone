@@ -12,21 +12,20 @@
 .footer-top {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 60px;
 
-  // @include mq('desktop') {
-  //   display: grid;
-  //   grid-template-columns: repeat(auto-fill, 1fr);
-  //   justify-content: space-between;
-  // }
+  @include mq('desktop') {
+    justify-content: start;
+    gap: 50px;
+  }
 
 
   &__content {
 
     @include mq('desktop') {
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
+      max-width: 250px;
+      width: 100%;
     }
   }
 
@@ -40,7 +39,7 @@
 
   &__title {
     margin-bottom: 30px;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 18px;
   }
 
@@ -53,7 +52,7 @@
 
   span {
     display: block;
-
+  
     &:not(:last-child) {
       margin-bottom: 13px;
     }
@@ -131,12 +130,10 @@
 }
 
 .footer-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 
   span {
+    display: block;
     margin-bottom: 10px;
   }
 

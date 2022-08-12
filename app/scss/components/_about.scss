@@ -6,8 +6,20 @@
     justify-content: space-between;
     align-items: center;
 
+    @include mq('tablet') {
+      flex-direction: column;
+    }
+
     &:not(:last-child) {
       margin-bottom: 60px;
+    }
+
+    &--reuse {
+
+      @include mq('tablet') {
+        flex-direction: column-reverse;
+      }
+
     }
   }
 
@@ -15,6 +27,8 @@
     margin-bottom: 30px;
     font-size: 30px;
     font-weight: 500;
+
+    
   }
 
   &__item {
@@ -22,10 +36,19 @@
   }
 
   &__text {
-    max-width: 600px;
-
+    
     p {
+      max-width: 600px;
       font-size: 16px;
+
+      @include mq('tablet-2') {
+        font-size: 14px;
+      }
+
+      @include mq('tablet') {
+        margin-bottom: 30px;
+      }
+
 
       &:not(:last-child) {
         margin-bottom: 20px;
@@ -33,28 +56,38 @@
     }
   }
 
-  &__img {
-    width: 405px;
-    height: 545px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
+  &__inner {
+    min-width: 470px;
 
-    &--cook {
-      background-image: url('..//../images/decor/cook.jpg');
+    @include mq('tablet') {
+      min-width: 0;
+      align-self: start;
     }
 
-    &--delivery {
-      background-image: url('..//../images/decor/deliveryman.jpg');
+    &--right {
+      margin-right: 30px;
+
+      @include mq('tablet') {
+        margin-right: 0;
+      }
     }
 
-    &--client {
-      background-image: url('..//../images/decor/client.jpg');
-    }
-    &--discount {
-      background-image: url('..//../images/decor/discount.jpg');
+    &--left {
+      margin-left: 30px;
+
+      @include mq('tablet') {
+        margin-left: 0;
+      }
     }
   }
 
+  &__img {
+    max-width: 405px;
+    max-height: 545px;
+
+    img {
+      object-fit: cover;
+    }
+  }
 
 }
