@@ -24,7 +24,6 @@
 
   @include mq('tablet-2') {
     min-height: calc(100vh - 100px);
-    padding-bottom: 60px;
   }
 
   &__wrapper {
@@ -183,6 +182,10 @@
 
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include mq('phone') {
+        margin-right: 20px;
+      }
     }
   }
 

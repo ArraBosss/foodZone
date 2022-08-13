@@ -14,23 +14,7 @@ menuClick.addEventListener('click', (e) => {
 });
 
 
-//Плавный скролл
 
-
-// const order = document.querySelector('#order'),
-//       visitBtn = document.querySelector('.hero__btn--visit');
-
-// function scrollTo(e) {
-//   window.scroll({
-//     left: 0,
-//     top: e.offsetTop,
-//     behavior: 'smooth'
-//   });
-// }
-
-// visitBtn.addEventListener('click', () => {
-// scrollTo(order);
-// });
 
 
 
@@ -62,31 +46,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
- 
-  
 });
 
 
-// const logo = document.querySelector('.logo');
-// let clonedLogo = logo.cloneNode(true);
-// const buttonIn = document.querySelector('.button__in');
-// const menu = document.querySelector('.menu__list');
+// Плавный скролл
 
+const order = document.querySelector('#order'),
+      visitBtn = document.querySelector('.hero__btn--visit'),
+      kitchen = document.querySelector('#kitchen'),
+      foodBtn = document.querySelector('.hero__btn--food');
 
-// // if (document.documentElement.clientWidth < 700) {
-// //   menu.prepend(clonedLogo);
-// //   menu.append(buttonIn);
-// // }
+function scrollTo(e) {
+  window.scroll({
+    left: 0,
+    top: e.offsetTop,
+    behavior: 'smooth'
+  });
+}
 
+visitBtn.addEventListener('click', () => {
+scrollTo(order);
+});
 
-// function checkMediaQuery() {
-//   if (document.documentElement.clientWidth < 768) {
-//     menu.prepend(clonedLogo);
-//   menu.append(buttonIn);
-//   } else if (window.innerWidth < 768) {
-//     menu.remove(clonedLogo);
-//   }
-// }
-// window.addEventListener('resize', checkMediaQuery);
-
+foodBtn.addEventListener('click', () => {
+scrollTo(kitchen);
+});
 
