@@ -32,6 +32,10 @@
 
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include mq('tablet-2') {
+        margin-right: 0;
+      }
     }
 
     span {
@@ -68,6 +72,11 @@
     max-width: 600px;
     padding-bottom: 40px;
     text-align: center;
+
+    @include mq('phone') {
+      padding: 0;
+      margin-bottom: 40px;
+    }
 
     svg {
       width: 50px;
