@@ -1,4 +1,5 @@
 .modal {
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
@@ -9,20 +10,31 @@
   background: rgba(0, 0, 0, 0.75);
   overflow-y: scroll;
 
+  @include mq('desktop') {
+    padding: 0 15px;
+  }
+
   &__wrapper {
     margin: 40px 0;
+
+    @include mq('phone') {
+      margin: 20px 0;
+    }
   }
 }
 
 .modal-product {
   margin: auto;
-  z-index: 100;
+
   border-radius: 15px;
   background-color: $card;
   max-width: 1170px;
   width: 100%;
   padding: 40px;
 
+  @include mq('tablet-2') {
+    padding: 20px;
+  }
 
   &__close {
     position: absolute;
@@ -48,14 +60,27 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+
+    @include mq('tablet') {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
   }
 
   &__info {
     max-width: 550px;
+
+    @include mq('tablet') {
+      align-self: start;
+    }
   }
 
   &__img {
     margin-right: 30px;
+
+    @include mq('tablet') {
+      margin-right: 0;
+    }
   }
 
   &__title {
@@ -72,9 +97,24 @@
     }
   }
 
+  &__row {
+    @include mq('phone') {
+      flex-direction: column;
+    }
+  }
+
   &__sum {
     font-size: 24px;
     font-weight: 500;
+
+    @include mq('phone') {
+      align-self: start;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    width: 235px;
   }
 }
 
@@ -109,6 +149,10 @@
     margin-bottom: 20px;
     font-size: 24px;
     line-height: 1.2;
+
+    @include mq('phone') {
+      font-weight: 600;
+    }
   }
 
   &__wrapper {
@@ -123,20 +167,63 @@
     grid-column-gap: 35px;
     grid-row-gap: 15px;
     margin-right: 20px;
+
+    @include mq('desktop') {
+      display: flex;
+      grid-column-gap: 0;
+      grid-row-gap: 0;
+      padding-bottom: 15px;
+    }
+  }
+
+  &__item {
+
+    @include mq('desktop') {
+      min-width: 191px;
+    }
+
+    @include mq('phone') {
+      min-width: 165px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
   }
 
   &__row {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
+
+    
+
+    @include mq('tablet-2') {
+      flex-direction: column;
+      align-items: start;
+    }
   }
 
   &__general {
+    margin-right: 5px;
+    font-size: 16px;
     font-weight: 500;
+
+    @include mq('tablet-2') {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__name,
+  &__amount {
+    font-size: 16px;
   }
 
   &__name {
-    margin-left: 5px;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
   }
 
   &__amount {
@@ -145,9 +232,9 @@
 
   &__delete {
     svg {
-      width: 10px;
-      height: 10px;
-      margin-bottom: -1px;
+      width: 14px;
+      height: 14px;
+      margin-bottom: -2px;
       fill: $white;
     }
   }

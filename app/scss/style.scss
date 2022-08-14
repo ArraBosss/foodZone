@@ -23,7 +23,7 @@
   justify-content: center;
 
   @include mq('tablet-2') {
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 61px);
   }
 
   &__wrapper {
@@ -130,7 +130,7 @@
 
       @include mq('phone') {
         margin-right: 0;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
       }
     }
   }
