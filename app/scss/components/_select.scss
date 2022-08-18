@@ -181,7 +181,6 @@
   }
 
   &__wrapper {
-    display: none;
     position: absolute;
     z-index: 10;
     left: 0;
@@ -190,9 +189,14 @@
     margin-top: -1px;
     border-radius: 0 0 15px 15px;
     overflow: hidden;
+    transition: height .2s ease;
+
+    &:not(.active) {
+      display: none;
+    }
 
     &--active {
-      display: block;
+      // display: block;
       border-top: 1px solid #4c4e5b;
     }
   }
