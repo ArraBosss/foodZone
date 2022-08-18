@@ -35,4 +35,8 @@ const swiperStock = new Swiper('.stock-slider', {
     nextEl: '.stock-slider__next',
     prevEl: '.stock-slider__prev'
   },
+
+  autoplay: {
+    disableOnInteraction: false,
+  },
 });

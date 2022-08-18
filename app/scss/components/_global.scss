@@ -102,10 +102,10 @@ body {
   }
 }
 
-.active {
-  color: $accent;
-  border-bottom: 2px solid $accent;
-}
+// .active {
+//   color: $accent;
+//   border-bottom: 2px solid $accent;
+// }
 
 .button {
   display: inline-block;
@@ -242,3 +242,6 @@ input[type=number]::-webkit-outer-spin-button {
     opacity: 1;
   }
 }
+
+
+

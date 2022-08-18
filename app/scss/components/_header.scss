@@ -9,6 +9,7 @@
 }
 
 .logo {
+  max-width: 128px;
 
   &__img {
     @include mq('tablet-2') {
@@ -98,27 +99,60 @@
 
     &--sub {
 
-      @include mq('tablet-2') {
-        position: relative;
+      // @include mq('tablet-2') {
+      //   position: relative;
 
-        &::after {
-          position: absolute;
-          content: '';
-          background-image: url('../images/icons/icon-drop.svg');
-          width: 12px;
-          height: 7px;
-          top: 25px;
-          right: 20px;
-          background-repeat: no-repeat;
-          opacity: 0.5;
-          transition: all 0.2s;
-        }
+      //   &::after {
+      //     position: absolute;
+      //     content: '';
+      //     background-image: url('../images/icons/icon-drop.svg');
+      //     width: 12px;
+      //     height: 7px;
+      //     top: 25px;
+      //     right: 20px;
+      //     background-repeat: no-repeat;
+      //     opacity: 0.5;
+      //     transition: all 0.2s;
+      //   }
+      // }
+    }
+  }
+
+  &__btn {
+    position: relative;
+
+    &::after {
+      display: none;
+      position: absolute;
+      content: '';
+      background-image: url('../images/icons/icon-drop.svg');
+      width: 12px;
+      height: 7px;
+      top: 50%;
+      right: 20px;
+      background-repeat: no-repeat;
+      opacity: 0.5;
+      transition: all 0.4s ease;
+
+
+      @include mq('tablet-2') {
+        display: block;
+      }
+
+    }
+
+    &--active {
+
+      &::after {
+        // top: 44%;
+        transform: rotate(-90deg);
       }
     }
   }
 
   &__link {
     font-size: 20px;
+    cursor: pointer;
 
     @include mq('tablet-2') {
       display: block;
@@ -142,9 +176,12 @@
   width: 100%;
   margin: 0 auto;
   top: 70px;
-  max-height: 0;
   overflow: hidden;
-  transition: all .5s;
+  transition: height .45s ease;
+
+    &:not(.active) {
+      display: none;
+    }
 
   @include mq('tablet-2') {
     position: static;
@@ -156,7 +193,7 @@
     align-items: center;
     justify-content: center;
     background-color: $card;
-    border-radius: 10px 10px 50px 50px;
+    border-radius: 10px 10px 30px 30px;
 
     @include mq('tablet-2') {
       justify-content: start;
@@ -197,10 +234,6 @@
       }
     }
   }
-}
-
-.down {
-  max-height: 150px
 }
 
 .user-nav {
