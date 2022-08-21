@@ -58,30 +58,30 @@
 
 
 
-// document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
-//   const burger = document.querySelector('.burger');
-//   const sideNav = document.querySelector('.menu');
-//   const bodyLock = document.querySelector('body');
-//   const overlay = document.querySelector('.overlay');
+  const burger = document.querySelector('.burger');
+  const sideNav = document.querySelector('.menu');
+  const bodyLock = document.querySelector('body');
+  const overlay = document.querySelector('.overlay');
 
-//   burger.addEventListener('click', () => {
-//     sideNav.classList.toggle('menu--active');
+  burger.addEventListener('click', () => {
+    sideNav.classList.toggle('menu--active');
 
-//     if (sideNav.classList.contains('menu--active')) {
-//       burger.classList.add('burger--active');
-//       bodyLock.classList.add('lock');
-//       overlay.classList.add('overlay--active');
-//     } else {
-//       burger.classList.remove('burger--active');
-//       bodyLock.classList.remove('lock');
-//       overlay.classList.remove('overlay--active');
+    if (sideNav.classList.contains('menu--active')) {
+      burger.classList.add('burger--active');
+      bodyLock.classList.add('lock');
+      overlay.classList.add('overlay--active');
+    } else {
+      burger.classList.remove('burger--active');
+      bodyLock.classList.remove('lock');
+      overlay.classList.remove('overlay--active');
 
-//     }
+    }
 
-//   });
+  });
 
-// });
+});
 
 
 // // Плавный скролл

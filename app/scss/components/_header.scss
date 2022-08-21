@@ -129,10 +129,11 @@
       width: 12px;
       height: 7px;
       top: 50%;
+      transform: translateY(-50%);
       right: 20px;
       background-repeat: no-repeat;
       opacity: 0.5;
-      transition: all 0.4s ease;
+      transition: transform 0.3s;
 
 
       @include mq('tablet-2') {
@@ -144,8 +145,7 @@
     &--active {
 
       &::after {
-        // top: 44%;
-        transform: rotate(-90deg);
+        transform: translateY(-50%) rotate(-90deg);
       }
     }
   }
@@ -160,7 +160,7 @@
     }
   }
 
-  &__btn {
+  &__in {
     width: 90%;
     padding: 17px 22px;
     font-size: 20px;
@@ -179,9 +179,9 @@
   overflow: hidden;
   transition: height .45s ease;
 
-    &:not(.active) {
-      display: none;
-    }
+  &:not(.active) {
+    display: none;
+  }
 
   @include mq('tablet-2') {
     position: static;
@@ -209,7 +209,11 @@
       margin-right: 50px;
 
       @include mq('tablet-2') {
-        margin-right: 45px;
+        margin-right: 40px;
+      }
+
+      @include mq('phone') {
+        margin-right: 35px;
       }
     }
   }

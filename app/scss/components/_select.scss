@@ -133,9 +133,9 @@
   }
 
   &__input {
-    padding: 20px 10px 19px 20px;
+    padding: 20px 10px 20px 20px;
     border: none;
-    border-radius: 15px;
+    border-radius: 13px;
     color: $white;
     background-color: #2E2F37;
 
@@ -151,6 +151,7 @@
     width: 148px;
     text-align: left;
     cursor: pointer;
+    border-bottom: 1px solid transparent;
 
     @include mq('desktop') {
       width: 100%;
@@ -162,20 +163,20 @@
       background-image: url('../images/icons/icon-drop.svg');
       width: 12px;
       height: 7px;
-      top: 50%;
-      right: 20px;
+      top: 51%;
       transform: translateY(-50%);
+      right: 20px;
       background-repeat: no-repeat;
       opacity: 0.5;
-      transition: all 0.2s;
+      transition: transform 0.3s;
     }
 
     &--active {
-      border-radius: 15px 15px 0 0;
+      border-radius: 13px 13px 0 0;
+      border-bottom: 1px solid #4c4e5b;
 
       &::after {
-        top: 44%;
-        transform: rotate(-90deg);
+        transform: translateY(-50%) rotate(-90deg);
       }
     }
   }
@@ -186,30 +187,25 @@
     left: 0;
     top: 100%;
     width: 100%;
-    margin-top: -1px;
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 0 13px 13px;
     overflow: hidden;
     transition: height .2s ease;
 
     &:not(.active) {
       display: none;
     }
-
-    &--active {
-      // display: block;
-      border-top: 1px solid #4c4e5b;
-    }
   }
 
   &__list {
-    max-height: 220px;
+    max-height: 230px;
     background-color: #2E2F37;
     scroll-snap-type: y mandatory;
     overflow: auto;
   }
 
   &__option {
-    padding: 19px 10px 20px 20px;
+    text-align: left;
+    padding: 20px 10px 20px 20px;
     cursor: pointer;
     scroll-snap-align: start;
 
