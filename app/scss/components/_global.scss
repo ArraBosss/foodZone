@@ -90,10 +90,10 @@ body {
     color: $accent;
   }
 
-  &:focus {
-    box-shadow: 0 0 0 2px rgba($accent, 0.7);
-    border-radius: 5px;
-  }
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($accent, 0.7);
+      border-radius: 5px;
+    }
 
   &:active {
     color: $white;
@@ -157,6 +157,31 @@ body {
     opacity: 0.5;
     box-shadow: none;
   }
+}
+
+@supports selector(:focus-visible) {
+  .button-nav:focus {
+    box-shadow:0 0 0 2px transparent;
+  }
+
+  .button:focus {
+    box-shadow:0 0 0 2px transparent;
+  }
+
+
+  
+  .button-nav:focus-visible {
+    box-shadow: 0 0 0 2px rgba($white, 0.7);
+    border-radius: 50px;
+  }
+
+
+  .button:focus-visible {
+    box-shadow: 0 0 0 2px rgba($white, 0.7);
+    border-radius: 50px;
+  }
+
+  
 }
 
 .title {
@@ -244,9 +269,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
-
 .close {
-  // transition: border-radius;
   transition-delay: .18s;
   border-radius: 13px;
 }

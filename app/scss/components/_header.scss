@@ -97,29 +97,30 @@
       margin-right: 0;
     }
 
-    &--sub {
+    // &--sub {
 
-      // @include mq('tablet-2') {
-      //   position: relative;
+    //   // @include mq('tablet-2') {
+    //   //   position: relative;
 
-      //   &::after {
-      //     position: absolute;
-      //     content: '';
-      //     background-image: url('../images/icons/icon-drop.svg');
-      //     width: 12px;
-      //     height: 7px;
-      //     top: 25px;
-      //     right: 20px;
-      //     background-repeat: no-repeat;
-      //     opacity: 0.5;
-      //     transition: all 0.2s;
-      //   }
-      // }
-    }
+    //   //   &::after {
+    //   //     position: absolute;
+    //   //     content: '';
+    //   //     background-image: url('../images/icons/icon-drop.svg');
+    //   //     width: 12px;
+    //   //     height: 7px;
+    //   //     top: 25px;
+    //   //     right: 20px;
+    //   //     background-repeat: no-repeat;
+    //   //     opacity: 0.5;
+    //   //     transition: all 0.2s;
+    //   //   }
+    //   // }
+    // }
   }
 
   &__btn {
     position: relative;
+    
 
     &::after {
       display: none;
