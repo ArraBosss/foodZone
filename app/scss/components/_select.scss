@@ -133,11 +133,16 @@
   }
 
   &__input {
+    height: 60px;
     padding: 20px 10px 20px 20px;
     border: none;
     border-radius: 13px;
     color: $white;
     background-color: #2E2F37;
+
+    &::placeholder {
+      font-size: 14px;
+    }
 
     &--top,
     &--bottom {
