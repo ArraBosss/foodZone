@@ -219,8 +219,6 @@
   }
 }
 
-
-
 .product-card {
   position: relative;
   display: flex;
@@ -254,6 +252,7 @@
   }
 
   &__link {
+    margin-bottom: 10px;
     align-self: center;
   }
 
@@ -261,7 +260,6 @@
     max-width: 240px;
     max-height: 240px;
     object-fit: cover;
-    margin-bottom: 10px;
     transition: transform 0.7s;
 
     &--rotate {
@@ -282,7 +280,7 @@
     max-height: 153px;
   }
 
-  &__test {
+  &__inner {
     min-height: 48px;
     margin-bottom: 20px;
 
@@ -296,9 +294,9 @@
     text-align: left;
     font-size: 20px;
     line-height: 1.2;
- 
+    
   }
-
+  
   &__description {
     flex: 1;
 
@@ -306,8 +304,7 @@
       max-height: 85px;
       margin-bottom: 25px;
       color: $description;
-      overflow: hidden;
-      text-overflow: ellipsis;
+
       text-align: left;
       @include line-clamp(5);
     }
