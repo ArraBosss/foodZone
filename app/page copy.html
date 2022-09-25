@@ -6,6 +6,13 @@
   <meta http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Food Zone | Главная</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ff0000">
+  <meta name="msapplication-TileColor" content="#14151a">
+  <meta name="theme-color" content="#14151a">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -13,141 +20,172 @@
   <div class="wrapper">
     
     <header class="header">
+
   <div class="container">
     <nav class="header__menu">
 
-      <a class="logo animation" href="#">
+      <a class="logo animation" href="index.html">
         <img class="logo__img" src="images/icons/logo.svg" alt="Логотип">
       </a>
 
-      <ul class="menu">
-        <li class="menu__item">
-          <a class="menu__link animation" href="#">Акции</a>
-        </li>
-        <li class="menu__item menu__item--sub">
-          <a class="menu__link menu__link--click animation" href="#">Меню</a>
+      <div class="menu">
+        <ul class="menu__list">
 
+          <li class="menu__item">
+            <a class="menu__logo animation" href="index.html">
+              <img class="logo__img" src="images/icons/logo.svg" alt="Логотип">
+            </a>
 
-          <div class="sub-menu" id="sub-menu">
+          </li>
 
-            <ul class="sub-menu__list">
-              <li class="sub-menu__item">
-                <a class="sub-menu__link animation" href="#">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#icon-pizza"></use>
-                  </svg>
-                  Пицца
-                </a>
-              </li>
-              <li class="sub-menu__item">
-                <a class="sub-menu__link animation" href="#">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#icon-set"></use>
-                  </svg>
-                  Сеты
-                </a>
-              </li>
-              <li class="sub-menu__item">
-                <a class="sub-menu__link animation" href="#">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#icon-roll"></use>
-                  </svg>
-                  Роллы
-                </a>
-              </li>
-              <li class="sub-menu__item">
-                <a class="sub-menu__link animation" href="#">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#icon-burger"></use>
-                  </svg>
-                  Бургеры
-                </a>
-              </li>
-              <li class="sub-menu__item">
-                <a class="sub-menu__link animation" href="#">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#icon-pasta"></use>
-                  </svg>
-                  Паста
-                </a>
-              </li>
-              <li class="sub-menu__item">
-                <a class="sub-menu__link animation" href="#">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#icon-salad"></use>
-                  </svg>
-                  Салаты
-                </a>
-              </li>
-              <li class="sub-menu__item">
-                <a class="sub-menu__link animation" href="#">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#icon-snack"></use>
-                  </svg>
-                  Снэки
-                </a>
-              </li>
-              <li class="sub-menu__item">
-                <a class="sub-menu__link animation" href="#">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#icon-cake"></use>
-                  </svg>
-                  Десерты
-                </a>
-              </li>
-              <li class="sub-menu__item">
-                <a class="sub-menu__link animation" href="#">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#icon-drink"></use>
-                  </svg>
-                  Напитки
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link animation" href="#">Доставка</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link animation" href="contacts.html">Контакты</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link animation" href="about.html">О нас</a>
-        </li>
-      </ul>
+          <li class="menu__item">
+            <a class="menu__link animation" href="stock.html">Акции</a>
+          </li>
 
-      <ul class="user-nav">
-        <li class="user-nav__item">
-          <button class="user-nav__btn user-nav__btn--search">
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-search"></use>
-            </svg>
-            <span class="sr-only">Кнопка поиска</span>
-          </button>
-        </li>
-        <li class="user-nav__item">
-          <button class="user-nav__btn user-nav__btn--cart">
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-cart"></use>
-            </svg>
-            <span class="user-nav__num">0</span>
-            <span class="sr-only">Кнопка корзины товаров</span>
-          </button>
-        </li>
-        <li class="user-nav__item">
-          <button class="user-nav__btn button-nav" type="button">
-            Вход
-            <span class="sr-only">Кнопка входа в аккаунт</span>
-          </button>
-        </li>
-      </ul>
+          <li class="menu__item menu__item--sub">
+            <a href="" class="menu__link menu__btn animation">Меню</a>
+
+            <div class="sub-menu" >
+
+              <ul class="sub-menu__list">
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-pizza"></use>
+                    </svg>
+                    <span class="sub-menu__name">Пицца</span>
+                  </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-set"></use>
+                    </svg>
+                    Сеты
+                  </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-roll"></use>
+                    </svg>
+                    <span class="sub-menu__name">Роллы</span>
+                  </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-burger"></use>
+                    </svg>
+                    <span class="sub-menu__name">Бургеры</span>
+                  </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-pasta"></use>
+                    </svg>
+                    <span class="sub-menu__name">Паста</span>
+                  </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-salad"></use>
+                    </svg>
+                    <span class="sub-menu__name">Салаты</span>
+                  </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-snack"></use>
+                    </svg>
+                    <span class="sub-menu__name">Снэки</span>
+                  </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-cake"></use>
+                    </svg>
+                    <span class="sub-menu__name">Десерты</span>
+                  </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-drink"></use>
+                    </svg>
+                    <span class="sub-menu__name">Напитки</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link animation" href="delivery.html">Доставка</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link animation" href="contacts.html">Контакты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link animation" href="about.html">О нас</a>
+          </li>
+
+          <li class="menu__item">
+            <button class="user-nav__btn button-nav menu__in" type="button">
+              Вход
+              <span class="sr-only">Кнопка входа в аккаунт</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="user-nav">
+        <ul class="user-nav__list">
+          <li class="user-nav__item">
+            <button class="user-nav__btn user-nav__btn--search animation">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-search"></use>
+              </svg>
+              <span class="sr-only">Кнопка поиска</span>
+            </button>
+          </li>
+
+          <li class="user-nav__item">
+            <button class="user-nav__btn user-nav__btn--cart animation">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="user-nav__num">0</span>
+              <span class="sr-only">Кнопка корзины товаров</span>
+            </button>
+          </li>
+
+          <li class="user-nav__item">
+            <button class="user-nav__btn button-nav" type="button">
+              Вход
+              <span class="sr-only">Кнопка входа в аккаунт</span>
+            </button>
+          </li>
+        </ul>
+
+        <button class="burger" type="button">
+          <span class="burger__line"></span>
+          <span class="sr-only">Открыть меню</span>
+          <span class="burger__line"></span>
+        </button>
+
+      </div>
     </nav>
-
   </div>
 </header>
 
     <main class="main">
+
+
 
 
     </main>

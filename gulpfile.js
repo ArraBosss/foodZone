@@ -52,6 +52,7 @@ function scripts() {
             'node_modules/swiper/swiper-bundle.min.js',
             'app/js/sliders.js',
             'app/js/products.js',
+            'app/js/filters.js',
             'app/js/main.js'  
         ])
         .pipe(concat('main.min.js'))

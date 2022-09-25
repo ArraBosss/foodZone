@@ -202,7 +202,7 @@
   }
 
   &__list {
-    max-height: 230px;
+    max-height: 226px;
     background-color: #2E2F37;
     scroll-snap-type: y mandatory;
     overflow: auto;
@@ -210,7 +210,7 @@
 
   &__option {
     text-align: left;
-    padding: 20px 10px 20px 20px;
+    padding: 19px 10px 20px 20px;
     cursor: pointer;
     scroll-snap-align: start;
 
