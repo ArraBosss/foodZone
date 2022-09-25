@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Zone | Пицца</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ff0000">
+  <meta name="msapplication-TileColor" content="#14151a">
+  <meta name="theme-color" content="#14151a">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+
+  <div class="container">
+    <nav class="header__menu">
+
+      <a class="logo animation" href="index.html">
+        <img class="logo__img" src="images/icons/logo.svg" alt="Логотип">
+      </a>
+
+      <div class="menu">
+        <ul class="menu__list">
+
+          <li class="menu__item">
+            <a class="menu__logo animation" href="index.html">
+              <img class="logo__img" src="images/icons/logo.svg" alt="Логотип">
+            </a>
+
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link animation" href="stock.html">Акции</a>
+          </li>
+
+          <li class="menu__item menu__item--sub">
+            <a href="" class="menu__link menu__btn animation">Меню</a>
+
+            <div class="sub-menu" >
+
+              <ul class="sub-menu__list">
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-pizza"></use>
+                    </svg>
+                    <span class="sub-menu__name">Пицца</span>
+                  </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-set"></use>
+                    </svg>
+                    Сеты
+                  </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-roll"></use>
+                    </svg>
+                    <span class="sub-menu__name">Роллы</span>
+                  </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-burger"></use>
+                    </svg>
+                    <span class="sub-menu__name">Бургеры</span>
+                  </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-pasta"></use>
+                    </svg>
+                    <span class="sub-menu__name">Паста</span>
+                  </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-salad"></use>
+                    </svg>
+                    <span class="sub-menu__name">Салаты</span>
+                  </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-snack"></use>
+                    </svg>
+                    <span class="sub-menu__name">Снэки</span>
+                  </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-cake"></use>
+                    </svg>
+                    <span class="sub-menu__name">Десерты</span>
+                  </a>
+                </li>
+                <li class="sub-menu__item">
+                  <a class="sub-menu__link animation" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-drink"></use>
+                    </svg>
+                    <span class="sub-menu__name">Напитки</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link animation" href="delivery.html">Доставка</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link animation" href="contacts.html">Контакты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link animation" href="about.html">О нас</a>
+          </li>
+
+          <li class="menu__item">
+            <button class="user-nav__btn button-nav menu__in" type="button">
+              Вход
+              <span class="sr-only">Кнопка входа в аккаунт</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="user-nav">
+        <ul class="user-nav__list">
+          <li class="user-nav__item">
+            <button class="user-nav__btn user-nav__btn--search animation">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-search"></use>
+              </svg>
+              <span class="sr-only">Кнопка поиска</span>
+            </button>
+          </li>
+
+          <li class="user-nav__item">
+            <button class="user-nav__btn user-nav__btn--cart animation">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="user-nav__num">0</span>
+              <span class="sr-only">Кнопка корзины товаров</span>
+            </button>
+          </li>
+
+          <li class="user-nav__item">
+            <button class="user-nav__btn button-nav" type="button">
+              Вход
+              <span class="sr-only">Кнопка входа в аккаунт</span>
+            </button>
+          </li>
+        </ul>
+
+        <button class="burger" type="button">
+          <span class="burger__line"></span>
+          <span class="sr-only">Открыть меню</span>
+          <span class="burger__line"></span>
+        </button>
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+    <main class="main">
+
+      <div class="bread-crumbs">
+        <div class="container">
+          <ul class="bread-crumbs__list">
+
+            <li class="bread-crumbs__item">
+              <a class="bread-crumbs__link animation" href="index.html">
+                Главная
+              </a>
+            </li>
+
+            <li class="bread-crumbs__item">
+              <a class="bread-crumbs__link">
+                Пицца
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="container">
+
+        
+  <ul class="filter">
+    <li class="filter__item">
+      <button data-filter="all" type="button" class="filter__btn filter__btn--all filter__btn--active button">
+        Все</button>
+    </li>
+    <li class="filter__item">
+      <button data-filter="hot" type="button" class="filter__btn filter__btn--hot button">
+        Острые</button>
+    </li>
+    <li class="filter__item">
+      <button data-filter="vegan" type="button" class="filter__btn filter__btn--vegan button">
+        Вегетарианские</button>
+    </li>
+  </ul>
+  
+  
+
+
+      <div class="popular pizza">
+        <ul class="popular__list">
+          <li class="popular__item">
+            <article class="product-card">
+              <a class="product-card__link animation " href="#">
+                <img class="product-card__img product-card__img--rotate" src="images/catalog/bbq-400x400.png"
+                  alt="Фото пиццы bbq">
+              </a>
+
+              <div class="product-card__inner">
+                <a class="product-card__name animation" href="#">
+                  <h3 class="product-card__title">
+                    BBQ
+                  </h3>
+                </a>
+              </div>
+
+              <div class="product-card__description">
+                <p>
+                  Пицца на сливочной основе в
+                  сочетании с сыром, телятиной BBQ,
+                  беконом, шампиньонами, петрушкой
+                  и красным маринованным луком
+                </p>
+              </div>
+
+              <div class="product-card__row">
+                <span class="product-card__price">215
+                  <span class="product-card__currency">грн.</span>
+                </span>
+
+                <span class="product-card__weight">30
+                  <span>см</span>
+                </span>
+              </div>
+
+              <button class="product-card__btn button" type="button">Выбрать</button>
+            </article>
+          </li>
+
+          <li class="popular__item">
+            <article class="product-card">
+              <a class="product-card__link animation" href="#">
+                <img class="product-card__img product-card__img--rotate" src="images/catalog/baffalo-400x400.png"
+                  alt="Фото пиццы баффало">
+              </a>
+
+              <div class="product-card__inner">
+                <a class="product-card__name animation" href="#">
+                  <h3 class="product-card__title">
+                    Баффало
+                  </h3>
+                </a>
+              </div>
+
+              <div class="product-card__description">
+                <p>
+                  Пицца на томатной основе с
+                  моцареллой, говядиной,
+                  салями наполи, артишоками,
+                  базиликом и луком фри
+                </p>
+              </div>
+
+              <div class="product-card__row">
+                <span class="product-card__price">205
+                  <span class="product-card__currency">грн.</span>
+                </span>
+
+                <span class="product-card__weight">30
+                  <span>см</span>
+                </span>
+              </div>
+
+              <button class="product-card__btn button" type="button">Выбрать</button>
+            </article>
+          </li>
+
+          <li class="popular__item hot">
+            <article class="product-card">
+              <a class="product-card__link animation" href="#">
+                <img class="product-card__img product-card__img--rotate" src="images/catalog/djavolo-400x400.png"
+                  alt="Фото пиццы дьяволо">
+              </a>
+
+              <div class="product-card__inner">
+                <a class="product-card__name animation" href="#">
+                  <h3 class="product-card__title">
+                    Дьяволо
+                  </h3>
+                </a>
+              </div>
+              <div class="product-card__description">
+                <p>
+                  Пицца на томатной основе с
+                  моцареллой, салями наполи, луком,
+                  перцем чили и халапеньо
+                </p>
+              </div>
+
+              <div class="product-card__row">
+                <span class="product-card__price">225
+                  <span class="product-card__currency">грн.</span>
+                </span>
+
+                <span class="product-card__weight">30
+                  <span>см</span>
+                </span>
+              </div>
+
+              <button class="product-card__btn button" type="button">Выбрать</button>
+            </article>
+          </li>
+
+          <li class="popular__item vegan">
+            <article class="product-card">
+              <a class="product-card__link animation" href="#">
+                <img class="product-card__img product-card__img--rotate" src="images/catalog/dzhovanni-400x400.png"
+                  alt="Фото пиццы джовани">
+              </a>
+
+              <div class="product-card__inner">
+                <a class="product-card__name animation" href="#">
+                  <h3 class="product-card__title">
+                    Джованни
+                  </h3>
+                </a>
+              </div>
+
+              <div class="product-card__description">
+                <p>
+                  Пицца на сливочной основе с
+                  моцареллой, грушей, кедровыми
+                  орешками, горгонзолой, базиликом
+                  и инжирным джемом
+                </p>
+              </div>
+
+              <div class="product-card__row">
+                <span class="product-card__price">215
+                  <span class="product-card__currency">грн.</span>
+                </span>
+
+                <span class="product-card__weight">30
+                  <span>см</span>
+                </span>
+              </div>
+
+              <button class="product-card__btn button" type="button">Выбрать</button>
+            </article>
+          </li>
+
+          <li class="popular__item vegan">
+            <article class="product-card">
+              <a class="product-card__link animation" href="#">
+                <img class="product-card__img product-card__img--rotate" src="images/catalog/chetyre-syra-400x400.png"
+                  alt="Фото пиццы четыре сыра">
+              </a>
+
+              <div class="product-card__inner">
+                <a class="product-card__name animation" href="#">
+                  <h3 class="product-card__title">
+                    Четыре сиры
+                  </h3>
+                </a>
+              </div>
+
+              <div class="product-card__description">
+                <p>
+                  Пицца на томатной или сливочной
+                  основе с моцареллой, горгонзолой,
+                  пармезаном и сыром фета
+                </p>
+              </div>
+
+              <div class="product-card__row">
+                <span class="product-card__price">235
+                  <span class="product-card__currency">грн.</span>
+                </span>
+
+                <span class="product-card__weight">30
+                  <span>см</span>
+                </span>
+              </div>
+
+              <button class="product-card__btn button" type="button">Выбрать</button>
+            </article>
+          </li>
+
+          <li class="popular__item vegan">
+            <article class="product-card">
+              <a class="product-card__link animation" href="#">
+                <img class="product-card__img product-card__img--rotate" src="images/catalog/margarita-400x400.png"
+                  alt="Фото пиццы маргарита">
+              </a>
+
+              <div class="product-card__inner">
+                <a class="product-card__name animation" href="#">
+                  <h3 class="product-card__title">
+                    Маргарита
+                  </h3>
+                </a>
+              </div>
+
+              <div class="product-card__description">
+                <p>
+                  Пицца на томатной основе с
+                  моцареллой и базиликом
+                </p>
+              </div>
+
+              <div class="product-card__row">
+                <span class="product-card__price">165
+                  <span class="product-card__currency">грн.</span>
+                </span>
+
+                <span class="product-card__weight">30
+                  <span>см</span>
+                </span>
+              </div>
+
+              <button class="product-card__btn button" type="button">Выбрать</button>
+            </article>
+          </li>
+
+          <li class="popular__item">
+            <article class="product-card">
+              <a class="product-card__link animation" href="#">
+                <img class="product-card__img product-card__img--rotate" src="images/catalog/peperoni-400x400.png"
+                  alt="Фото пиццы пепперони">
+              </a>
+
+              <div class="product-card__inner">
+                <a class="product-card__name animation" href="#">
+                  <h3 class="product-card__title">
+                    Пепперони
+                  </h3>
+                </a>
+              </div>
+
+              <div class="product-card__description">
+                <p>
+                  Пицца на томатной основе с моцареллой и острой салями наполи
+                </p>
+              </div>
+
+              <div class="product-card__row">
+                <span class="product-card__price">195
+                  <span class="product-card__currency">грн.</span>
+                </span>
+
+                <span class="product-card__weight">30
+                  <span>см</span>
+                </span>
+              </div>
+
+              <button class="product-card__btn button" type="button">Выбрать</button>
+            </article>
+          </li>
+
+          <li class="popular__item vegan">
+            <article class="product-card">
+              <a class="product-card__link animation" href="#">
+                <img class="product-card__img product-card__img--rotate" src="images/catalog/formadzho-400x400.png"
+                  alt="Фото пиццы формаджи">
+              </a>
+
+              <div class="product-card__inner">
+                <a class="product-card__name animation" href="#">
+                  <h3 class="product-card__title">
+                    Формаджи
+                  </h3>
+                </a>
+              </div>
+
+              <div class="product-card__description">
+                <p>
+                  Пицца на сливочной основе с моцареллой, бри, пармезаном и сыром фета
+                </p>
+              </div>
+
+              <div class="product-card__row">
+                <span class="product-card__price">175
+                  <span class="product-card__currency">грн.</span>
+                </span>
+
+                <span class="product-card__weight">30
+                  <span>см</span>
+                </span>
+              </div>
+
+              <button class="product-card__btn button" type="button">Выбрать</button>
+            </article>
+          </li>
+
+          <li class="popular__item">
+            <article class="product-card">
+              <a class="product-card__link animation" href="#">
+                <img class="product-card__img product-card__img--rotate" src="images/catalog/karbonara-400x400.png"
+                  alt="Фото пиццы карбонара">
+              </a>
+
+              <div class="product-card__inner">
+                <a class="product-card__name animation" href="#">
+                  <h3 class="product-card__title">
+                    Карбонара
+                  </h3>
+                </a>
+              </div>
+
+              <div class="product-card__description">
+                <p>
+                  Пицца на сливочной основе с моцареллой, беконом, пармезаном, чесноком и яйцом
+                </p>
+              </div>
+
+              <div class="product-card__row">
+                <span class="product-card__price">185
+                  <span class="product-card__currency">грн.</span>
+                </span>
+
+                <span class="product-card__weight">30
+                  <span>см</span>
+                </span>
+              </div>
+
+              <button class="product-card__btn button" type="button">Выбрать</button>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+
+      <div class="footer-top__content">
+        <a class="footer-logo" href="#">
+          <img class="footer-logo__img" src="images/icons/logo-footer.svg" alt="Логотип">
+        </a>
+        <div class="footer-top__about">
+          <p>
+            Доставка еды от «Food Zone» позволит получить желаемые блюда для полноценного обеда, ужина или посиделок.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-top__content">
+        <h3 class="footer-top__title">
+          Информация
+        </h3>
+        <ul class="footer-top__list">
+          <li class="footer-top__item">
+            <a class="footer-top__link animation" href="#">Акции</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link animation" href="#">О нас</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link animation" href="#">Доставка</a>
+          </li>
+        </ul>
+      </div>
+
+      <address class="footer-top__content">
+        <h3 class="footer-top__title">
+          Наши контакты
+        </h3>
+        <ul class="footer-top__list">
+          <li class="footer-top__item">
+            <a class="footer-top__link animation" href="https://goo.gl/maps/xbfn6VLXgeqw78yv6" target="_blank">г.
+              Горское ул. Советская, 5</a>
+          </li>
+          
+          <li class="footer-top__item">
+            <span>
+              По вопросам доставки и брони:
+            </span>
+            <a class="footer-top__link animation" href="tel:+30995263333">
+              099-526-44-44</a>
+          </li>
+        </ul>
+      </address>
+
+      <div class="footer-top__content">
+        <h3 class="footer-top__title">
+          Время работы
+        </h3>
+        <ul class="footer-top__list">
+          <li class="footer-top__item">
+            <time class="footer-top__period" datetime="10:00 - 22:00">пн-пт: 10:00-22:00</time>
+          </li>
+          <li class="footer-top__item">
+            <time class="footer-top__period" datetime="10:00 - 22:00">сб-вс: 10:00-23:00</time>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-top__content">
+        <h3 class="footer-top__title">
+          Соц. сети
+        </h3>
+        <ul class="networks">
+          <li class="networks__social">
+            <a class="networks__link networks__link--facebook" target="_blank" href="https://www.facebook.com/">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-facebook"></use>
+              </svg>
+              <span class="sr-only">Мы в Facebook</span>
+            </a>
+          </li>
+          <li class="networks__social">
+            <a class="networks__link networks__link--instagram" target="_blank" href="https://www.instagram.com/">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-instagram"></use>
+              </svg>
+              <span class="sr-only">Мы в Facebook</span>
+            </a>
+          </li>
+          <li class="networks__social">
+            <a class="networks__link networks__link--telegram" target="_blank" href="https://web.telegram.org/z/">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-telegram"></use>
+              </svg>
+              <span class="sr-only">Мы в Facebook</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>
+        © 2022 Food Zone Интернациональная еда в коробочках.
+      </span>
+      <a class="footer-bottom__link" target="_blank" href="https://zakon.rada.gov.ua/laws/show/2297-17#Text">
+        Политика конфиденциальности
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

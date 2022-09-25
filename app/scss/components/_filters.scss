@@ -1,0 +1,59 @@
+.filter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    background-color: #2e2f37;
+    text-transform: capitalize;
+    padding: 14px 25px 12px 40px;
+    border: none;
+    border-radius: 13px;
+    transition: background-color 0.5s;
+
+    &:hover {
+      box-shadow: none;
+      background-color: $accent;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+    }
+
+    &--all {
+      &::after {
+        background-image: url('../images/decor/diamond.svg');
+      }
+    }
+
+    &--hot {
+      &::after {
+        background-image: url('../images/decor/hot.svg');
+      }
+    }
+
+    &--vegan {
+      &::after {
+        background-image: url('../images/decor/vegan.svg');
+      }
+    }
+
+    &--active {
+      background-color: $accent;
+    }
+  }
+}

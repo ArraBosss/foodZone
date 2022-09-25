@@ -2,7 +2,7 @@ const CATALOG = [
 
   {
     id: '001',
-    category: 'pizza',
+    category: 'Пицца',
     img: 'images/catalog/bbq-400x400.png',
     name: 'BBQ',
     description: 'Пицца на сливочной основе в сочетании с сыром, телятиной BBQ, беконом, шампиньонами, петрушкой и красным маринованным луком',
@@ -13,7 +13,7 @@ const CATALOG = [
 
   {
     id: '002',
-    category: 'pizza',
+    category: 'Пицца',
     img: 'images/catalog/baffalo-400x400.png',
     name: 'Баффало',
     description: 'Пицца на томатной основе с моцареллой, говядиной, салями наполи, артишоками, базиликом и луком фри',
@@ -24,7 +24,7 @@ const CATALOG = [
 
   {
     id: '003',
-    category: 'pizza',
+    category: 'Пицца',
     img: 'images/catalog/djavolo-400x400.png',
     name: 'Дьяволо',
     description: 'Пицца на томатной основе с моцареллой, салями наполи, луком, перцем чили и халапеньо',
@@ -35,7 +35,7 @@ const CATALOG = [
 
   {
     id: '004',
-    category: 'pizza',
+    category: 'Пицца',
     img: 'images/catalog/dzhovanni-400x400.png',
     name: 'Джованни',
     description: 'Пицца на сливочной основе с моцареллой, грушей, кедровыми орешками, горгонзолой, базиликом и инжирным джемом',
@@ -46,7 +46,7 @@ const CATALOG = [
 
   {
     id: '005',
-    category: 'pizza',
+    category: 'Пицца',
     img: 'images/catalog/chetyre-syra-400x400.png',
     name: 'Четыре сыра',
     description: 'Пицца на томатной или сливочной основе с моцареллой, горгонзолой, пармезаном и сыром фета',
@@ -57,7 +57,7 @@ const CATALOG = [
 
   {
     id: '006',
-    category: 'pizza',
+    category: 'Пицца',
     img: 'images/catalog/margarita-400x400.png',
     name: 'Маргарита',
     description: 'Пицца на томатной основе с моцареллой и базиликом',
@@ -68,7 +68,7 @@ const CATALOG = [
 
   {
     id: '007',
-    category: 'sets',
+    category: 'Сеты',
     img: 'images/catalog/maxi-set-400x400.png',
     name: 'Макси сет',
     description: 'Феликс с тигровыми креветками, Филадельфия тунец, Ролл с гребешком, Унаги, Хьюстон и Гунканы с лососем, Гунканы с тунцом',
@@ -79,7 +79,7 @@ const CATALOG = [
 
   {
     id: '008',
-    category: 'sets',
+    category: 'Сеты',
     img: 'images/catalog/tri-drakona-set-400x400.png',
     name: 'Три дракона',
     description: 'Зеленый, черный и красный драконы',
@@ -90,7 +90,7 @@ const CATALOG = [
 
   {
     id: '009',
-    category: 'sets',
+    category: 'Сеты',
     img: 'images/catalog/futomaki-set-400x400.png',
     name: 'Футомаки сет',
     description: 'Футомаки с лососем и тунцем, Балтимор с лососем, Тампопо',
@@ -101,7 +101,7 @@ const CATALOG = [
   
   {
     id: '010',
-    category: 'rolls',
+    category: 'Роллы',
     img: 'images/catalog/filadelfija-losos-400x400.png',
     name: 'Филадельфия свежий лосось',
     description: 'Лосось свежий, сыр филадельфия, икра тобико, огурец',
@@ -112,7 +112,7 @@ const CATALOG = [
 
   {
     id: '011',
-    category: 'rolls',
+    category: 'Роллы',
     img: 'images/catalog/mito-tempura-tunec-400x400.png',
     name: 'Мито темпура с тунцом',
     description: 'Тунец, сыр филадельфия, авокадо, снежный краб, соус унаги',
@@ -123,7 +123,7 @@ const CATALOG = [
 
   {
     id: '012',
-    category: 'rolls',
+    category: 'Роллы',
     img: 'images/catalog/nju-jork-400x400.png',
     name: 'Нью-Йорк',
     description: 'Лосось, сыр Филадельфия, авокадо, тобико, японский майонез',
@@ -134,7 +134,7 @@ const CATALOG = [
 
   {
     id: '013',
-    category: 'rolls',
+    category: 'Роллы',
     img: 'images/catalog/unagi-400x400.png',
     name: 'Унаги',
     description: 'Угорь, лосось, огурец, сыр Филадельфия, соус унаги, кунжут',
@@ -145,7 +145,7 @@ const CATALOG = [
 
   {
     id: '014',
-    category: 'rolls',
+    category: 'Роллы',
     img: 'images/catalog/california-losos-400x400.png',
     name: 'Калифорния с лососем',
     description: 'Лосось свежий, икра, авокадо, огурец, майонез японский',
@@ -156,7 +156,7 @@ const CATALOG = [
 
   {
     id: '015',
-    category: 'rolls',
+    category: 'Роллы',
     img: 'images/catalog/hjuston-400x400.png',
     name: 'Хьюстон',
     description: 'Лосось, угорь, сыр Филадельфия, авокадо, соус унаги, кунжут',
@@ -167,7 +167,7 @@ const CATALOG = [
 
   {
     id: '016',
-    category: 'burgers',
+    category: 'Бургеры',
     img: 'images/catalog/gamburger-400x400.png',
     name: 'Гамбургер',
     description: 'Бифштекс из натуральной говядины, лук, кусочек маринованного огурца, заправленные горчицей и кетчупом, в душистой булочке из пшеничной муки',
@@ -178,7 +178,7 @@ const CATALOG = [
 
   {
     id: '017',
-    category: 'burgers',
+    category: 'Бургеры',
     img: 'images/catalog/chikenburger-400x400.png',
     name: 'Чикенбургер',
     description: 'Молотое куриное мясо в хрустящей панировке, и свежий салат, заправленный соусом, в булочке из пшеничной муки с семенами сезама',
@@ -189,7 +189,7 @@ const CATALOG = [
 
   {
     id: '018',
-    category: 'burgers',
+    category: 'Бургеры',
     img: 'images/catalog/cheeseburger-400x400.png',
     name: 'Чизбургер',
     description: 'Бифштекс из натуральной говядины, сыр "Чеддер", кусочек маринованного огурца и лука, с горчицей и кетчупом, в булочке из пшеничной муки',
@@ -200,7 +200,7 @@ const CATALOG = [
 
   {
     id: '019',
-    category: 'burgers',
+    category: 'Бургеры',
     img: 'images/catalog/royal-cheeseburger-400x400.png',
     name: 'Рояль Чизбургер',
     description: 'Бифштекс из натуральной говядины с кусочками сыра, заправленной горчицей, кетчупом, луком и двумя кусочкми маринованного огурчика',
@@ -211,7 +211,7 @@ const CATALOG = [
 
   {
     id: '020',
-    category: 'burgers',
+    category: 'Бургеры',
     img: 'images/catalog/double-cheeseburger-400x400.png',
     name: 'Дабл Чизбургер',
     description: 'Два бифштекса из натуральной говядины, два кусочка сыра "Чеддер", лук, горчица, кетчуп, булочка',
@@ -222,7 +222,7 @@ const CATALOG = [
 
   {
     id: '021',
-    category: 'burgers',
+    category: 'Бургеры',
     img: 'images/catalog/big-tasty-400x400.png',
     name: 'Биг Тести',
     description: 'Натуральная говядина в сочетании со свежими овощами и плавленым сыром Эмменталь',
@@ -233,7 +233,7 @@ const CATALOG = [
 
   {
     id: '022',
-    category: 'pasta',
+    category: 'Паста',
     img: 'images/catalog/bolognese-400x400.png',
     name: 'Болоньезе',
     description: 'Паста "Спагетти", соус "Болоньезе"(на основе говядины), перец черный, сыр "Пармезан"',
@@ -244,7 +244,7 @@ const CATALOG = [
   
   {
     id: '023',
-    category: 'pasta',
+    category: 'Паста',
     img: 'images/catalog/carbonara-400x400.png',
     name: 'Карбонара',
     description: 'Паста "Спагетти", сливочный соус, бекон, сыр "Пармезан", перец черный',
@@ -255,7 +255,7 @@ const CATALOG = [
 
   {
     id: '024',
-    category: 'pasta',
+    category: 'Паста',
     img: 'images/catalog/fettuccine-400x400.png',
     name: 'Феттучини с лососем и грибами',
     description: 'Феттучини, сливки, шампиньоны свежие, лосось, сыр "Пармезан"',
@@ -266,7 +266,7 @@ const CATALOG = [
 
   {
     id: '025',
-    category: 'salads',
+    category: 'Салаты',
     img: 'images/catalog/cezar-kurica-400x400.png',
     name: 'Салат Цезарь',
     description: 'Микс салата, яйцо перепелиное, помидор черри, куриное филе, бекон, пармезан, гренки, соус "Кобб"',
@@ -277,7 +277,7 @@ const CATALOG = [
 
   {
     id: '026',
-    category: 'salads',
+    category: 'Салаты',
     img: 'images/catalog/greek-400x400.png',
     name: 'Салат Греческий',
     description: 'Микс салата, помидор, огурец, болгарский перец, лук, сыр фета, маслины, прованские травы, соус "Италия"',
@@ -288,7 +288,7 @@ const CATALOG = [
 
   {
     id: '027',
-    category: 'salads',
+    category: 'Салаты',
     img: 'images/catalog/roast-beef-400x400.png',
     name: 'Cалат с Ростбифом',
     description: 'Телятина, битые огурцы, морковь, перец болгарский, сельдерей, листья шпината, руколы и салата айсберг, помидоры черри, соус "Тайский"',
@@ -299,7 +299,7 @@ const CATALOG = [
 
   {
     id: '028',
-    category: 'salads',
+    category: 'Салаты',
     img: 'images/catalog/cobb-400x400.png',
     name: 'Кобб салат с курицей гриль',
     description: 'Kуриная грудка-гриль, зерна кукурузы гриль, томаты, сыр с голубой плесенью, листья руколы, шпината и салата айсберг, заправка на основе французской горчицы',
@@ -310,7 +310,7 @@ const CATALOG = [
 
   {
     id: '029',
-    category: 'salads',
+    category: 'Салаты',
     img: 'images/catalog/chicken-mango-400x400.png',
     name: 'Чике-манго салат',
     description: 'Kуриная грудка-гриль, зерна кукурузы гриль, томаты, сыр с голубой плесенью, листья руколы, шпината и салата айсберг, заправка на основе французской горчицы',
@@ -321,7 +321,7 @@ const CATALOG = [
 
   {
     id: '030',
-    category: 'salads',
+    category: 'Салаты',
     img: 'images/catalog/pineapple-chutney-400x400.png',
     name: 'Салат с ананасовым чатни',
     description: 'Запеченое куриное филе, сыр Бри, обжаренный ананас с яблоком, имбирем, корицей и медом, а так же листья рукколы, шпината и салата айсберг, клюквенный соуc',
@@ -332,7 +332,7 @@ const CATALOG = [
 
   {
     id: '031',
-    category: 'snacks',
+    category: 'Снэки',
     img: 'images/catalog/french-fries-400x400.png',
     name: 'Картофель фри',
     description: 'Порция хрустящих, золотистых, обжаренных в растительном фритюре и слегка посоленных соломок отборного картофеля',
@@ -343,7 +343,7 @@ const CATALOG = [
 
   {
     id: '032',
-    category: 'snacks',
+    category: 'Снэки',
     img: 'images/catalog/chicken-strips-400x400.png',
     name: 'Куриные стрипсы',
     description: 'Кусочки 100% сочной, нежной курятины в хрустящей панировке',
@@ -354,7 +354,7 @@ const CATALOG = [
 
   {
     id: '033',
-    category: 'snacks',
+    category: 'Снэки',
     img: 'images/catalog/rustic-potatoes-400x400.png',
     name: 'Картофель по-деревенски',
     description: 'Вкусные, обжаренные в растительном фритюре ломтики отборного картофеля со специями',
@@ -365,7 +365,7 @@ const CATALOG = [
 
   {
     id: '034',
-    category: 'icecreams',
+    category: 'Десерты',
     img: 'images/catalog/ice-cream-choko-400x400.png',
     name: 'Мороженое Шоколадное',
     description: 'Мороженое, политое нежным шоколадным топингом',
@@ -376,7 +376,7 @@ const CATALOG = [
 
   {
     id: '035',
-    category: 'icecreams',
+    category: 'Десерты',
     img: 'images/catalog/ice-cream-straw-400x400.png',
     name: 'Мороженое Клубничное',
     description: 'Мороженое, политое сладким клубничным топингом',
@@ -387,7 +387,7 @@ const CATALOG = [
 
   {
     id: '036',
-    category: 'icecreams',
+    category: 'Десерты',
     img: 'images/catalog/ice-cream-caram-400x400.png',
     name: 'Мороженое Карамельное',
     description: 'Мороженое, политое нежным карамельным топингом',
@@ -398,7 +398,7 @@ const CATALOG = [
 
   {
     id: '037',
-    category: 'beverages',
+    category: 'Напитки',
     img: 'images/catalog/pina-colada-400x400.png',
     name: 'Пина-колада',
     description: 'Ром светлый - 50 мл, кокосовое молоко - 30 мл, сок ананасовый - 50 мл',
@@ -409,7 +409,7 @@ const CATALOG = [
 
   {
     id: '038',
-    category: 'beverages',
+    category: 'Напитки',
     img: 'images/catalog/mojito-400x400.png',
     name: 'Мохито',
     description: 'Ром светлый - 45 мл, сок лайма - 20 мл, мята - 6 веточек, сироп сахарный - 10 мл, содовая - доверху',
@@ -420,7 +420,7 @@ const CATALOG = [
 
   {
     id: '039',
-    category: 'beverages',
+    category: 'Напитки',
     img: 'images/catalog/sex-on-the-beach-400x400.png',
     name: 'Секс на пляже',
     description: 'Водка - 40 мл, щнапс персиковый - 20 мл, сок клюквенный - 40 мл, сок апельсиновый - 40 гр',
@@ -431,7 +431,7 @@ const CATALOG = [
 
   {
     id: '040',
-    category: 'beverages',
+    category: 'Напитки',
     img: 'images/catalog/cola-05-400x400.png',
     name: 'Кока-кола',
     description: 'Прохладительный газированный напиток «Кока-Кола»',
@@ -442,7 +442,7 @@ const CATALOG = [
 
   {
     id: '041',
-    category: 'beverages',
+    category: 'Напитки',
     img: 'images/catalog/sprajt-05-400x400.png',
     name: 'Спрайт',
     description: 'Прохладительный газированный напиток «Спрайт»',
@@ -453,7 +453,7 @@ const CATALOG = [
 
   {
     id: '042',
-    category: 'beverages',
+    category: 'Напитки',
     img: 'images/catalog/fanta-05-400x400.png',
     name: 'Фанта',
     description: 'Прохладительный газированный напиток «Фанта»',
