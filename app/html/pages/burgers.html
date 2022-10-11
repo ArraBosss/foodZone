@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Zone | Пицца</title>
+  <title>Food Zone | Бургеры</title>
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -18,7 +18,6 @@
 
 <body>
   <div class="wrapper">
-    <div class="overlay"></div>
 
     @include('../components/_header.html')
 
@@ -36,7 +35,7 @@
 
             <li class="bread-crumbs__item">
               <a class="bread-crumbs__link">
-                Пицца
+                Бургеры
               </a>
             </li>
           </ul>
@@ -48,39 +47,36 @@
 
         @include('../components/_filters.html')
 
-        <div class="popular pizza">
+        <div class="popular burgers">
           <ul class="popular__list">
             <li class="popular__item">
               <article class="product-card">
-                <a class="product-card__link animation " href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/bbq-400x400.png"
-                    alt="Фото пиццы bbq">
+                <a class="product-card__link animation" href="#">
+                  <img class="product-card__img product-card__img--scale" src="images/catalog/gamburger-400x400.png"
+                    alt="Фото Гамбургер">
                 </a>
 
                 <div class="product-card__inner">
                   <a class="product-card__name animation" href="#">
                     <h3 class="product-card__title">
-                      BBQ
+                      Гамбургер
                     </h3>
                   </a>
                 </div>
-
                 <div class="product-card__description">
                   <p>
-                    Пицца на сливочной основе в
-                    сочетании с сыром, телятиной BBQ,
-                    беконом, шампиньонами, петрушкой
-                    и красным маринованным луком
+                    Бифштекс из натуральной говядины, лук, кусочек маринованного огурца, заправленные горчицей и
+                    кетчупом, в душистой булочке из пшеничной муки
                   </p>
                 </div>
 
                 <div class="product-card__row">
-                  <span class="product-card__price">215
+                  <span class="product-card__price">69
                     <span class="product-card__currency">грн.</span>
                   </span>
 
-                  <span class="product-card__weight">30
-                    <span>см</span>
+                  <span class="product-card__weight">100
+                    <span>г</span>
                   </span>
                 </div>
 
@@ -91,34 +87,136 @@
             <li class="popular__item">
               <article class="product-card">
                 <a class="product-card__link animation" href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/baffalo-400x400.png"
-                    alt="Фото пиццы баффало">
+                  <img class="product-card__img product-card__img--scale"
+                    src="images/catalog/chikenburger-400x400.png" alt="Фото Чикенбургера">
                 </a>
 
                 <div class="product-card__inner">
                   <a class="product-card__name animation" href="#">
                     <h3 class="product-card__title">
-                      Баффало
+                      Чикенбургер
+                    </h3>
+                  </a>
+                </div>
+                <div class="product-card__description">
+                  <p>
+                    Молотое куриное мясо в хрустящей панировке, и свежий салат, заправленный соусом, в булочке из
+                    пшеничной муки с семенами сезама
+                  </p>
+                </div>
+
+                <div class="product-card__row">
+                  <span class="product-card__price">79
+                    <span class="product-card__currency">грн.</span>
+                  </span>
+
+                  <span class="product-card__weight">125
+                    <span>г</span>
+                  </span>
+                </div>
+
+                <button class="product-card__btn button" type="button">Выбрать</button>
+              </article>
+            </li>
+
+            <li class="popular__item">
+              <article class="product-card">
+                <a class="product-card__link animation" href="#">
+                  <img class="product-card__img product-card__img--scale"
+                    src="images/catalog/cheeseburger-400x400.png" alt="Фото Чизбургера">
+                </a>
+
+                <div class="product-card__inner">
+                  <a class="product-card__name animation" href="#">
+                    <h3 class="product-card__title">
+                      Чизбургер
                     </h3>
                   </a>
                 </div>
 
                 <div class="product-card__description">
                   <p>
-                    Пицца на томатной основе с
-                    моцареллой, говядиной,
-                    салями наполи, артишоками,
-                    базиликом и луком фри
+                    Бифштекс из натуральной говядины, сыр "Чеддер", кусочек маринованного огурца и лука, с горчицей и
+                    кетчупом, в булочке из пшеничной муки
                   </p>
                 </div>
 
                 <div class="product-card__row">
-                  <span class="product-card__price">205
+                  <span class="product-card__price">89
                     <span class="product-card__currency">грн.</span>
                   </span>
 
-                  <span class="product-card__weight">30
-                    <span>см</span>
+                  <span class="product-card__weight">120
+                    <span>г</span>
+                  </span>
+                </div>
+
+                <button class="product-card__btn button" type="button">Выбрать</button>
+              </article>
+            </li>
+
+            <li class="popular__item">
+              <article class="product-card">
+                <a class="product-card__link animation" href="#">
+                  <img class="product-card__img product-card__img--scale"
+                    src="images/catalog/royal-cheeseburger-400x400.png" alt="Фото Чизбургера с беконом">
+                </a>
+
+                <div class="product-card__inner">
+                  <a class="product-card__name animation" href="#">
+                    <h3 class="product-card__title">
+                      Рояль Чизбургер
+                    </h3>
+                  </a>
+                </div>
+                <div class="product-card__description">
+                  <p>
+                    Бифштекс из натуральной говядины с кусочками сыра, заправленной горчицей, кетчупом, луком и двумя
+                    кусочкми маринованного огурчика
+                  </p>
+                </div>
+
+                <div class="product-card__row">
+                  <span class="product-card__price">169
+                    <span class="product-card__currency">грн.</span>
+                  </span>
+
+                  <span class="product-card__weight">200
+                    <span>г</span>
+                  </span>
+                </div>
+
+                <button class="product-card__btn button" type="button">Выбрать</button>
+              </article>
+            </li>
+
+            <li class="popular__item">
+              <article class="product-card">
+                <a class="product-card__link animation" href="#">
+                  <img class="product-card__img product-card__img--scale"
+                    src="images/catalog/double-cheeseburger-400x400.png" alt="Фото Дабл Чизбургера">
+                </a>
+
+                <div class="product-card__inner">
+                  <a class="product-card__name animation" href="#">
+                    <h3 class="product-card__title">
+                      Дабл Чизбургер
+                    </h3>
+                  </a>
+                </div>
+                <div class="product-card__description">
+                  <p>
+                    Два бифштекса из натуральной говядины, два кусочка сыра "Чеддер", лук, горчица, кетчуп, булочка
+                  </p>
+                </div>
+
+                <div class="product-card__row">
+                  <span class="product-card__price">149
+                    <span class="product-card__currency">грн.</span>
+                  </span>
+
+                  <span class="product-card__weight">165
+                    <span>г</span>
                   </span>
                 </div>
 
@@ -129,32 +227,30 @@
             <li class="popular__item hot">
               <article class="product-card">
                 <a class="product-card__link animation" href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/djavolo-400x400.png"
-                    alt="Фото пиццы дьяволо">
+                  <img class="product-card__img product-card__img--scale" src="images/catalog/big-tasty-400x400.png"
+                    alt="Фото Бургера Аризона">
                 </a>
 
                 <div class="product-card__inner">
                   <a class="product-card__name animation" href="#">
                     <h3 class="product-card__title">
-                      Дьяволо
+                      Бургер Аризона
                     </h3>
                   </a>
                 </div>
                 <div class="product-card__description">
                   <p>
-                    Пицца на томатной основе с
-                    моцареллой, салями наполи, луком,
-                    перцем чили и халапеньо
+                    Натуральная говядина в сочетании со свежими овощами, плавленым сыром Эмменталь и острым соусом
                   </p>
                 </div>
 
                 <div class="product-card__row">
-                  <span class="product-card__price">225
+                  <span class="product-card__price">179
                     <span class="product-card__currency">грн.</span>
                   </span>
 
-                  <span class="product-card__weight">30
-                    <span>см</span>
+                  <span class="product-card__weight">335
+                    <span>г</span>
                   </span>
                 </div>
 
@@ -165,212 +261,30 @@
             <li class="popular__item vegan">
               <article class="product-card">
                 <a class="product-card__link animation" href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/dzhovanni-400x400.png"
-                    alt="Фото пиццы джовани">
+                  <img class="product-card__img product-card__img--scale" src="images/catalog/mcplant-400x400.png"
+                    alt="Фото McPlant">
                 </a>
 
                 <div class="product-card__inner">
                   <a class="product-card__name animation" href="#">
                     <h3 class="product-card__title">
-                      Джованни
+                      McPlant
                     </h3>
                   </a>
                 </div>
-
                 <div class="product-card__description">
                   <p>
-                    Пицца на сливочной основе с
-                    моцареллой, грушей, кедровыми
-                    орешками, горгонзолой, базиликом
-                    и инжирным джемом
+                  Сочная котлеты на растительной основе, с веганским соусом для сэндвичей и веганской альтернативой сыру в булочке с кунжутом.
                   </p>
                 </div>
 
                 <div class="product-card__row">
-                  <span class="product-card__price">215
+                  <span class="product-card__price">169
                     <span class="product-card__currency">грн.</span>
                   </span>
 
-                  <span class="product-card__weight">30
-                    <span>см</span>
-                  </span>
-                </div>
-
-                <button class="product-card__btn button" type="button">Выбрать</button>
-              </article>
-            </li>
-
-            <li class="popular__item vegan">
-              <article class="product-card">
-                <a class="product-card__link animation" href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/chetyre-syra-400x400.png"
-                    alt="Фото пиццы четыре сыра">
-                </a>
-
-                <div class="product-card__inner">
-                  <a class="product-card__name animation" href="#">
-                    <h3 class="product-card__title">
-                      Четыре сиры
-                    </h3>
-                  </a>
-                </div>
-
-                <div class="product-card__description">
-                  <p>
-                    Пицца на томатной или сливочной
-                    основе с моцареллой, горгонзолой,
-                    пармезаном и сыром фета
-                  </p>
-                </div>
-
-                <div class="product-card__row">
-                  <span class="product-card__price">235
-                    <span class="product-card__currency">грн.</span>
-                  </span>
-
-                  <span class="product-card__weight">30
-                    <span>см</span>
-                  </span>
-                </div>
-
-                <button class="product-card__btn button" type="button">Выбрать</button>
-              </article>
-            </li>
-
-            <li class="popular__item vegan">
-              <article class="product-card">
-                <a class="product-card__link animation" href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/margarita-400x400.png"
-                    alt="Фото пиццы маргарита">
-                </a>
-
-                <div class="product-card__inner">
-                  <a class="product-card__name animation" href="#">
-                    <h3 class="product-card__title">
-                      Маргарита
-                    </h3>
-                  </a>
-                </div>
-
-                <div class="product-card__description">
-                  <p>
-                    Пицца на томатной основе с
-                    моцареллой и базиликом
-                  </p>
-                </div>
-
-                <div class="product-card__row">
-                  <span class="product-card__price">165
-                    <span class="product-card__currency">грн.</span>
-                  </span>
-
-                  <span class="product-card__weight">30
-                    <span>см</span>
-                  </span>
-                </div>
-
-                <button class="product-card__btn button" type="button">Выбрать</button>
-              </article>
-            </li>
-
-            <li class="popular__item">
-              <article class="product-card">
-                <a class="product-card__link animation" href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/peperoni-400x400.png"
-                    alt="Фото пиццы пепперони">
-                </a>
-
-                <div class="product-card__inner">
-                  <a class="product-card__name animation" href="#">
-                    <h3 class="product-card__title">
-                      Пепперони
-                    </h3>
-                  </a>
-                </div>
-
-                <div class="product-card__description">
-                  <p>
-                    Пицца на томатной основе с моцареллой и острой салями наполи
-                  </p>
-                </div>
-
-                <div class="product-card__row">
-                  <span class="product-card__price">195
-                    <span class="product-card__currency">грн.</span>
-                  </span>
-
-                  <span class="product-card__weight">30
-                    <span>см</span>
-                  </span>
-                </div>
-
-                <button class="product-card__btn button" type="button">Выбрать</button>
-              </article>
-            </li>
-
-            <li class="popular__item vegan">
-              <article class="product-card">
-                <a class="product-card__link animation" href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/formadzho-400x400.png"
-                    alt="Фото пиццы формаджи">
-                </a>
-
-                <div class="product-card__inner">
-                  <a class="product-card__name animation" href="#">
-                    <h3 class="product-card__title">
-                      Формаджи
-                    </h3>
-                  </a>
-                </div>
-
-                <div class="product-card__description">
-                  <p>
-                    Пицца на сливочной основе с моцареллой, бри, пармезаном и сыром фета
-                  </p>
-                </div>
-
-                <div class="product-card__row">
-                  <span class="product-card__price">175
-                    <span class="product-card__currency">грн.</span>
-                  </span>
-
-                  <span class="product-card__weight">30
-                    <span>см</span>
-                  </span>
-                </div>
-
-                <button class="product-card__btn button" type="button">Выбрать</button>
-              </article>
-            </li>
-
-            <li class="popular__item">
-              <article class="product-card">
-                <a class="product-card__link animation" href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/karbonara-400x400.png"
-                    alt="Фото пиццы карбонара">
-                </a>
-
-                <div class="product-card__inner">
-                  <a class="product-card__name animation" href="#">
-                    <h3 class="product-card__title">
-                      Карбонара
-                    </h3>
-                  </a>
-                </div>
-
-                <div class="product-card__description">
-                  <p>
-                    Пицца на сливочной основе с моцареллой, беконом, пармезаном, чесноком и яйцом
-                  </p>
-                </div>
-
-                <div class="product-card__row">
-                  <span class="product-card__price">185
-                    <span class="product-card__currency">грн.</span>
-                  </span>
-
-                  <span class="product-card__weight">30
-                    <span>см</span>
+                  <span class="product-card__weight">315
+                    <span>г</span>
                   </span>
                 </div>
 
@@ -379,15 +293,8 @@
             </li>
           </ul>
         </div>
-      </div>
 
-      <div class="modal">
-
-        <div class="modal__wrapper">
-
-
-        </div>
-      </div>
+    </div>
     </main>
 
     @include('../components/_footer.html')
@@ -396,5 +303,4 @@
 
   <script src="js/main.min.js"></script>
 </body>
-
 </html>

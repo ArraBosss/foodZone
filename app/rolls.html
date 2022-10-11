@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Zone | Пицца</title>
+  <title>Food Zone | Роллы</title>
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -18,7 +18,6 @@
 
 <body>
   <div class="wrapper">
-    <div class="overlay"></div>
 
     <header class="header">
 
@@ -197,7 +196,7 @@
 
             <li class="bread-crumbs__item">
               <a class="bread-crumbs__link">
-                Пицца
+                Роллы
               </a>
             </li>
           </ul>
@@ -223,39 +222,36 @@
     </li>
   </ul>
 
-        <div class="popular pizza">
+        <div class="popular rolls">
           <ul class="popular__list">
             <li class="popular__item">
-              <article class="product-card">
-                <a class="product-card__link animation " href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/bbq-400x400.png"
-                    alt="Фото пиццы bbq">
+              <article class="product-card product-card--resize">
+                <a class="product-card__link animation" href="#">
+                  <img class="product-card__wide product-card__img product-card__img--scale"
+                    src="images/catalog/filadelfija-losos-400x400.png" alt="Фото ролл Филадельфия">
                 </a>
 
                 <div class="product-card__inner">
                   <a class="product-card__name animation" href="#">
                     <h3 class="product-card__title">
-                      BBQ
+                      Филадельфия свежий лосось
                     </h3>
                   </a>
                 </div>
 
                 <div class="product-card__description">
                   <p>
-                    Пицца на сливочной основе в
-                    сочетании с сыром, телятиной BBQ,
-                    беконом, шампиньонами, петрушкой
-                    и красным маринованным луком
+                    Лосось свежий, сыр филадельфия, икра тобико, огурец
                   </p>
                 </div>
 
                 <div class="product-card__row">
-                  <span class="product-card__price">215
+                  <span class="product-card__price">250
                     <span class="product-card__currency">грн.</span>
                   </span>
 
-                  <span class="product-card__weight">30
-                    <span>см</span>
+                  <span class="product-card__weight">300
+                    <span>г</span>
                   </span>
                 </div>
 
@@ -264,183 +260,33 @@
             </li>
 
             <li class="popular__item">
-              <article class="product-card">
+              <article class="product-card product-card--resize">
                 <a class="product-card__link animation" href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/baffalo-400x400.png"
-                    alt="Фото пиццы баффало">
+                  <img class="product-card__wide product-card__img product-card__img--scale"
+                    src="images/catalog/mito-tempura-tunec-400x400.png" alt="Фото ролл Мито тумпура с тунцом">
                 </a>
 
                 <div class="product-card__inner">
                   <a class="product-card__name animation" href="#">
                     <h3 class="product-card__title">
-                      Баффало
+                      Мито темпура с тунцом
                     </h3>
                   </a>
                 </div>
 
                 <div class="product-card__description">
                   <p>
-                    Пицца на томатной основе с
-                    моцареллой, говядиной,
-                    салями наполи, артишоками,
-                    базиликом и луком фри
+                    Тунец, сыр филадельфия, авокадо, снежный краб, соус унаги
                   </p>
                 </div>
 
                 <div class="product-card__row">
-                  <span class="product-card__price">205
+                  <span class="product-card__price">270
                     <span class="product-card__currency">грн.</span>
                   </span>
 
-                  <span class="product-card__weight">30
-                    <span>см</span>
-                  </span>
-                </div>
-
-                <button class="product-card__btn button" type="button">Выбрать</button>
-              </article>
-            </li>
-
-            <li class="popular__item hot">
-              <article class="product-card">
-                <a class="product-card__link animation" href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/djavolo-400x400.png"
-                    alt="Фото пиццы дьяволо">
-                </a>
-
-                <div class="product-card__inner">
-                  <a class="product-card__name animation" href="#">
-                    <h3 class="product-card__title">
-                      Дьяволо
-                    </h3>
-                  </a>
-                </div>
-                <div class="product-card__description">
-                  <p>
-                    Пицца на томатной основе с
-                    моцареллой, салями наполи, луком,
-                    перцем чили и халапеньо
-                  </p>
-                </div>
-
-                <div class="product-card__row">
-                  <span class="product-card__price">225
-                    <span class="product-card__currency">грн.</span>
-                  </span>
-
-                  <span class="product-card__weight">30
-                    <span>см</span>
-                  </span>
-                </div>
-
-                <button class="product-card__btn button" type="button">Выбрать</button>
-              </article>
-            </li>
-
-            <li class="popular__item vegan">
-              <article class="product-card">
-                <a class="product-card__link animation" href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/dzhovanni-400x400.png"
-                    alt="Фото пиццы джовани">
-                </a>
-
-                <div class="product-card__inner">
-                  <a class="product-card__name animation" href="#">
-                    <h3 class="product-card__title">
-                      Джованни
-                    </h3>
-                  </a>
-                </div>
-
-                <div class="product-card__description">
-                  <p>
-                    Пицца на сливочной основе с
-                    моцареллой, грушей, кедровыми
-                    орешками, горгонзолой, базиликом
-                    и инжирным джемом
-                  </p>
-                </div>
-
-                <div class="product-card__row">
-                  <span class="product-card__price">215
-                    <span class="product-card__currency">грн.</span>
-                  </span>
-
-                  <span class="product-card__weight">30
-                    <span>см</span>
-                  </span>
-                </div>
-
-                <button class="product-card__btn button" type="button">Выбрать</button>
-              </article>
-            </li>
-
-            <li class="popular__item vegan">
-              <article class="product-card">
-                <a class="product-card__link animation" href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/chetyre-syra-400x400.png"
-                    alt="Фото пиццы четыре сыра">
-                </a>
-
-                <div class="product-card__inner">
-                  <a class="product-card__name animation" href="#">
-                    <h3 class="product-card__title">
-                      Четыре сиры
-                    </h3>
-                  </a>
-                </div>
-
-                <div class="product-card__description">
-                  <p>
-                    Пицца на томатной или сливочной
-                    основе с моцареллой, горгонзолой,
-                    пармезаном и сыром фета
-                  </p>
-                </div>
-
-                <div class="product-card__row">
-                  <span class="product-card__price">235
-                    <span class="product-card__currency">грн.</span>
-                  </span>
-
-                  <span class="product-card__weight">30
-                    <span>см</span>
-                  </span>
-                </div>
-
-                <button class="product-card__btn button" type="button">Выбрать</button>
-              </article>
-            </li>
-
-            <li class="popular__item vegan">
-              <article class="product-card">
-                <a class="product-card__link animation" href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/margarita-400x400.png"
-                    alt="Фото пиццы маргарита">
-                </a>
-
-                <div class="product-card__inner">
-                  <a class="product-card__name animation" href="#">
-                    <h3 class="product-card__title">
-                      Маргарита
-                    </h3>
-                  </a>
-                </div>
-
-                <div class="product-card__description">
-                  <p>
-                    Пицца на томатной основе с
-                    моцареллой и базиликом
-                  </p>
-                </div>
-
-                <div class="product-card__row">
-                  <span class="product-card__price">165
-                    <span class="product-card__currency">грн.</span>
-                  </span>
-
-                  <span class="product-card__weight">30
-                    <span>см</span>
+                  <span class="product-card__weight">315
+                    <span>г</span>
                   </span>
                 </div>
 
@@ -449,33 +295,136 @@
             </li>
 
             <li class="popular__item">
-              <article class="product-card">
+              <article class="product-card product-card--resize">
                 <a class="product-card__link animation" href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/peperoni-400x400.png"
-                    alt="Фото пиццы пепперони">
+                  <img class="product-card__wide product-card__img product-card__img--scale"
+                    src="images/catalog/nju-jork-400x400.png" alt="Фото ролл Нью-Йорк">
                 </a>
 
                 <div class="product-card__inner">
                   <a class="product-card__name animation" href="#">
                     <h3 class="product-card__title">
-                      Пепперони
+                      Нью-Йорк
+                    </h3>
+                  </a>
+                </div>
+                <div class="product-card__description">
+                  <p>
+                    Лосось, сыр Филадельфия, авокадо, тобико, японский майонез.
+                  </p>
+                </div>
+
+                <div class="product-card__row">
+                  <span class="product-card__price">230
+                    <span class="product-card__currency">грн.</span>
+                  </span>
+
+                  <span class="product-card__weight">280
+                    <span>г</span>
+                  </span>
+                </div>
+
+                <button class="product-card__btn button" type="button">Выбрать</button>
+              </article>
+            </li>
+
+            <li class="popular__item">
+              <article class="product-card product-card--resize">
+                <a class="product-card__link animation" href="#">
+                  <img class="product-card__wide product-card__img product-card__img--scale"
+                    src="images/catalog/unagi-400x400.png" alt="Фото ролл Унаги">
+                </a>
+
+                <div class="product-card__inner">
+                  <a class="product-card__name animation" href="#">
+                    <h3 class="product-card__title">
+                      Унаги
                     </h3>
                   </a>
                 </div>
 
                 <div class="product-card__description">
                   <p>
-                    Пицца на томатной основе с моцареллой и острой салями наполи
+                    Угорь, лосось, огурец, сыр Филадельфия, соус унаги, кунжут.
                   </p>
                 </div>
 
                 <div class="product-card__row">
-                  <span class="product-card__price">195
+                  <span class="product-card__price">300
                     <span class="product-card__currency">грн.</span>
                   </span>
 
-                  <span class="product-card__weight">30
-                    <span>см</span>
+                  <span class="product-card__weight">315
+                    <span>г</span>
+                  </span>
+                </div>
+
+                <button class="product-card__btn button" type="button">Выбрать</button>
+              </article>
+            </li>
+
+            <li class="popular__item">
+              <article class="product-card product-card--resize">
+                <a class="product-card__link animation" href="#">
+                  <img class="product-card__wide product-card__img product-card__img--scale"
+                    src="images/catalog/california-losos-400x400.png" alt="Фото ролл Калифорния с лососем">
+                </a>
+
+                <div class="product-card__inner">
+                  <a class="product-card__name animation" href="#">
+                    <h3 class="product-card__title">
+                      Калифорния с лососем
+                    </h3>
+                  </a>
+                </div>
+                <div class="product-card__description">
+                  <p>
+                    Лосось свежий, икра, авокадо, огурец, майонез японский
+                  </p>
+                </div>
+
+                <div class="product-card__row">
+                  <span class="product-card__price">280
+                    <span class="product-card__currency">грн.</span>
+                  </span>
+
+                  <span class="product-card__weight">220
+                    <span>г</span>
+                  </span>
+                </div>
+
+                <button class="product-card__btn button" type="button">Выбрать</button>
+              </article>
+            </li>
+
+            <li class="popular__item">
+              <article class="product-card product-card--resize">
+                <a class="product-card__link animation" href="#">
+                  <img class="product-card__wide product-card__img product-card__img--scale"
+                    src="images/catalog/hjuston-400x400.png" alt="Фото ролл Хьюстон">
+                </a>
+
+                <div class="product-card__inner">
+                  <a class="product-card__name animation" href="#">
+                    <h3 class="product-card__title">
+                      Хьюстон
+                    </h3>
+                  </a>
+                </div>
+
+                <div class="product-card__description">
+                  <p>
+                    Лосось, угорь, сыр Филадельфия, авокадо, соус унаги, кунжут
+                  </p>
+                </div>
+
+                <div class="product-card__row">
+                  <span class="product-card__price">290
+                    <span class="product-card__currency">грн.</span>
+                  </span>
+
+                  <span class="product-card__weight">280
+                    <span>г</span>
                   </span>
                 </div>
 
@@ -484,23 +433,23 @@
             </li>
 
             <li class="popular__item vegan">
-              <article class="product-card">
+              <article class="product-card product-card--resize">
                 <a class="product-card__link animation" href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/formadzho-400x400.png"
-                    alt="Фото пиццы формаджи">
+                  <img class="product-card__wide product-card__img product-card__img--scale"
+                    src="images/catalog/jasaj-400x400.png" alt="Фото ролл ясай">
                 </a>
 
                 <div class="product-card__inner">
                   <a class="product-card__name animation" href="#">
                     <h3 class="product-card__title">
-                      Формаджи
+                      Ясай
                     </h3>
                   </a>
                 </div>
 
                 <div class="product-card__description">
                   <p>
-                    Пицца на сливочной основе с моцареллой, бри, пармезаном и сыром фета
+                    Авокадо, сладкий перец, огурец, салат
                   </p>
                 </div>
 
@@ -509,8 +458,8 @@
                     <span class="product-card__currency">грн.</span>
                   </span>
 
-                  <span class="product-card__weight">30
-                    <span>см</span>
+                  <span class="product-card__weight">240
+                    <span>г</span>
                   </span>
                 </div>
 
@@ -518,34 +467,69 @@
               </article>
             </li>
 
-            <li class="popular__item">
-              <article class="product-card">
+            <li class="popular__item hot">
+              <article class="product-card product-card--resize">
                 <a class="product-card__link animation" href="#">
-                  <img class="product-card__img product-card__img--rotate" src="images/catalog/karbonara-400x400.png"
-                    alt="Фото пиццы карбонара">
+                  <img class="product-card__wide product-card__img product-card__img--scale"
+                    src="images/catalog/spacy-400x400.png" alt="Фото ролл спайси с угрем">
                 </a>
 
                 <div class="product-card__inner">
                   <a class="product-card__name animation" href="#">
                     <h3 class="product-card__title">
-                      Карбонара
+                      Спайси с угрем
                     </h3>
                   </a>
                 </div>
 
                 <div class="product-card__description">
                   <p>
-                    Пицца на сливочной основе с моцареллой, беконом, пармезаном, чесноком и яйцом
+                    Угорь, икра, авокадо, огурец, японский майонез, соусом спайси
                   </p>
                 </div>
 
                 <div class="product-card__row">
-                  <span class="product-card__price">185
+                  <span class="product-card__price">325
                     <span class="product-card__currency">грн.</span>
                   </span>
 
-                  <span class="product-card__weight">30
-                    <span>см</span>
+                  <span class="product-card__weight">220
+                    <span>г</span>
+                  </span>
+                </div>
+
+                <button class="product-card__btn button" type="button">Выбрать</button>
+              </article>
+            </li>
+
+            <li class="popular__item vegan">
+              <article class="product-card product-card--resize">
+                <a class="product-card__link animation" href="#">
+                  <img class="product-card__wide product-card__img product-card__img--scale"
+                    src="images/catalog/maki-ogurec-400x400.png" alt="Фото ролл маки с огурцом">
+                </a>
+
+                <div class="product-card__inner">
+                  <a class="product-card__name animation" href="#">
+                    <h3 class="product-card__title">
+                      Маки с огурцом
+                    </h3>
+                  </a>
+                </div>
+
+                <div class="product-card__description">
+                  <p>
+                    Рис, нори, огурец, кунжут
+                  </p>
+                </div>
+
+                <div class="product-card__row">
+                  <span class="product-card__price">95
+                    <span class="product-card__currency">грн.</span>
+                  </span>
+
+                  <span class="product-card__weight">100
+                    <span>г</span>
                   </span>
                 </div>
 
@@ -554,15 +538,8 @@
             </li>
           </ul>
         </div>
-      </div>
 
-      <div class="modal">
-
-        <div class="modal__wrapper">
-
-
-        </div>
-      </div>
+    </div>
     </main>
 
     <footer class="footer">
@@ -681,5 +658,4 @@
 
   <script src="js/main.min.js"></script>
 </body>
-
 </html>
