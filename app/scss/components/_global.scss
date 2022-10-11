@@ -59,7 +59,7 @@ body {
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   z-index: -99;
   height: 100%;
   width: 100%;
@@ -79,8 +79,6 @@ body {
   @include mq('phone') {
     padding-top: 40px;
   }
-
-
 }
 
 .animation {
@@ -123,7 +121,6 @@ body {
 
   &:focus {
     box-shadow: 0 0 0 2px rgba($white, 0.7);
-   
   }
 
   &:active {
@@ -160,6 +157,7 @@ body {
 }
 
 @supports selector(:focus-visible) {
+
   .button-nav:focus {
     box-shadow:0 0 0 2px transparent;
   }
@@ -172,21 +170,17 @@ body {
     box-shadow:0 0 0 2px transparent;
   }
 
-
-  
   .button-nav:focus-visible {
     box-shadow: 0 0 0 2px rgba($white, 0.7);
   }
 
-
   .button:focus-visible {
     box-shadow: 0 0 0 2px rgba($white, 0.7);
   }
+
   .animation:focus-visible {
     box-shadow: 0 0 0 2px rgba($accent, 0.7);
   }
-
-  
 }
 
 .title {
@@ -275,33 +269,12 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
-
-
-//анимация для фильтра
-.hide {
-  display: none;
-  // animation-name: a1;
-  // animation-duration: 1s;
-  // animation-fill-mode: forwards;
-}
-
-// @keyframes a1{
-//   to {
-//     opacity: 0;
-//     min-height: 0;
-//     min-width: 0;
-//     padding: 0;
-//     margin: 0;
-//     border: 0;
-//   }
-// }
-
-
-
-
-
 //для дропдавн
 .close {
   transition-delay: .18s;
   border-radius: 13px;
+}
+
+.hide {
+  display: none;
 }

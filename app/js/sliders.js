@@ -2,7 +2,6 @@ const swiperMain = new Swiper('.slider__swiper', {
   loop: true,
   slidesPerView:1,
   
-
   navigation: {
     nextEl: '.slider__next',
     prevEl: '.slider__prev'
@@ -27,7 +26,6 @@ const swiperStock = new Swiper('.stock-slider', {
     993: {
       slidesPerView: 3,
       spaceBetween: 30,
-
     }
   },
 

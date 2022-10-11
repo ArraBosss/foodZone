@@ -124,7 +124,7 @@ function dropDown(wrappSelector, contentSelector, btnSelector,
     });
 
     document.addEventListener('click', function (e) {
-      if (e.target !== dropBtn) {
+      if (e.target !== dropBtn && dropBtn.classList.contains(activeClass)) {
         dropBtn.classList.add(closeSelector);
         container.style.height = '0px';
         dropBtn.classList.remove(activeClass);
@@ -139,7 +139,8 @@ function dropDown(wrappSelector, contentSelector, btnSelector,
     });
 
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Tab' || e.key === 'Escape') {
+      if (dropBtn.classList.contains(activeClass) && 
+      (e.key === 'Tab' || e.key === 'Escape')) {
         dropBtn.classList.add(closeSelector);
         container.style.height = '0px';
         dropBtn.classList.remove(activeClass);

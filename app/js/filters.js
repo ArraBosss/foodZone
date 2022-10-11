@@ -1,8 +1,9 @@
 
 const filter = (headerSelector, btnSelector, contentSelector, activeClass) => {
+
   const header = document.querySelector(headerSelector),
-    btn = document.querySelectorAll(btnSelector),
-    content = document.querySelectorAll(contentSelector);
+        btn = document.querySelectorAll(btnSelector),
+        content = document.querySelectorAll(contentSelector);
 
   function hideFilterContent() {
     btn.forEach(item => {
@@ -14,7 +15,6 @@ const filter = (headerSelector, btnSelector, contentSelector, activeClass) => {
     btn[i].classList.add(activeClass);
   }
 
- 
 
   header.addEventListener('click', (e) => {
     const target = e.target;
@@ -40,7 +40,6 @@ const filter = (headerSelector, btnSelector, contentSelector, activeClass) => {
       });
     }
   });
-
 };
 
 window.addEventListener('DOMContentLoaded', () => {
