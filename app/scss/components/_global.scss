@@ -156,6 +156,20 @@ body {
   }
 }
 
+.title {
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+
+  @include mq('phone') {
+    margin-bottom: 40px;
+    font-size: 27px;
+  }
+}
+
+//Фокус только при нажатии Tab
 @supports selector(:focus-visible) {
 
   .button-nav:focus {
@@ -183,19 +197,7 @@ body {
   }
 }
 
-.title {
-  margin-bottom: 60px;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 1.2;
-
-  @include mq('phone') {
-    margin-bottom: 40px;
-    font-size: 27px;
-  }
-}
-
+//Скрытие кнопок счетчика
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -217,10 +219,13 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+//Смена цвета календаря на белый
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
 
+
+//Стилизация скролл-бара
 ::-webkit-scrollbar {
   width: 7px;
 
@@ -269,7 +274,7 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
-//для дропдавн
+//для dropdown
 .close {
   transition-delay: .18s;
   border-radius: 13px;

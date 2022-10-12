@@ -1,3 +1,545 @@
+window.addEventListener('click', function (e) {
+
+  const modal = document.querySelector('.modal');
+  const modalProduct = document.querySelector('.modal-product');
+  const bodyLock = document.querySelector('body');
+  const overlay = document.querySelector('.overlay');
+
+  const target = e.target;
+
+  if (target.classList.contains('product-card__btn')) {
+
+    const card = target.closest('.popular__item');
+
+    const productInfo = {
+      img: card.querySelector('.product-card__img').getAttribute('src'),
+      alt: card.querySelector('.product-card__img').getAttribute('alt'),
+      title: card.querySelector('.product-card__title').innerText,
+      description: card.querySelector('.product-card__description').innerText,
+      price: card.querySelector('.product-card__price').innerText,
+    };
+
+    const modalItemHtml = `<div class="modal-product__inner">
+
+      <div class="modal-product__img">
+        <img class="product-card__img" src="${productInfo.img}" width="240" height="240"
+          alt="${productInfo.alt}">
+      </div>
+
+      <div class="modal-product__info">
+        <button data-close class="modal-product__close" type="button">
+          <svg>
+            <use xlink:href="images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <h3 class="modal-product__title">
+          ${productInfo.title}
+        </h3>
+
+        <div class="modal-product__description">
+          <p>
+            ${productInfo.description}
+          </p>
+        </div>
+
+        <div class="counter">
+          <div class="counter__control" data-action="minus">
+            <svg class="counter__btn">
+              <use xlink:href="images/sprite.svg#icon-minus"></use>
+            </svg>
+          </div>
+          <div class="counter__current">1
+            <span>шт.</span>
+          </div>
+          <div class="counter__control" data-action="plus">
+            <svg class="counter__btn">
+              <use xlink:href="images/sprite.svg#icon-plus"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>`;
+
+    const modalIngredients = `<div class="ingredients">
+  <h4 class="ingredients__title">Дополнительные ингридиенты:</h4>
+  <div class="ingredients__wrapper">
+    <ul class="ingredients__list">
+
+      <li class="ingredients__item">
+        <article class="modal-card">
+          <div class="modal-card__wrapper">
+            <img class="modal-card__img product-card__img--scale"
+              src="images/catalog/additional-gorgonzola.png" width="125" height="125"
+              alt="Фото сыра Горгондзола">
+
+            <div class="modal-card__inner">
+              <h3 class="modal-card__title">
+                Горгондзола
+              </h3>
+            </div>
+
+            <div class="modal-card__row">
+              <span class="modal-card__price">25
+                <span class="modal-card__currency">грн.</span>
+              </span>
+              <button class="modal-card__button" type="button">
+                <svg class="counter__btn">
+                  <use xlink:href="images/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <li class="ingredients__item">
+        <article class="modal-card">
+          <div class="modal-card__wrapper">
+            <img class="modal-card__img product-card__img--scale"
+              src="images/catalog/additional-mozzarella.png" width="125" height="125"
+              alt="Фото сыра Моцарелла">
+
+            <div class="modal-card__inner">
+              <h3 class="modal-card__title">
+                Моцарелла
+              </h3>
+            </div>
+
+            <div class="modal-card__row">
+              <span class="modal-card__price">20
+                <span class="modal-card__currency">грн.</span>
+              </span>
+              <button class="modal-card__button" type="button">
+                <svg class="counter__btn">
+                  <use xlink:href="images/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <li class="ingredients__item">
+        <article class="modal-card">
+          <div class="modal-card__wrapper">
+            <img class="modal-card__img product-card__img--scale"
+              src="images/catalog/additional-parmesan.png" width="125" height="125"
+              alt="Фото сыра Пармезан">
+            <div class="modal-card__inner">
+              <h3 class="modal-card__title">
+                Пармезан
+              </h3>
+            </div>
+            <div class="modal-card__row">
+              <span class="modal-card__price">25
+                <span class="modal-card__currency">грн.</span>
+              </span>
+              <button class="modal-card__button" type="button">
+                <svg class="counter__btn">
+                  <use xlink:href="images/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+        </article>
+      </li>
+
+      <li class="ingredients__item">
+        <article class="modal-card">
+          <div class="modal-card__wrapper">
+            <img class="modal-card__img product-card__img--scale product-card__img--scale"
+              src="images/catalog/additional-salmon.png" width="125" height="125" alt="Фото Лосося">
+            <div class="modal-card__inner">
+              <h3 class="modal-card__title">
+                Лосось
+              </h3>
+            </div>
+            <div class="modal-card__row">
+              <span class="modal-card__price">55
+                <span class="modal-card__currency">грн.</span>
+              </span>
+              <button class="modal-card__button" type="button">
+                <svg class="counter__btn">
+                  <use xlink:href="images/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <li class="ingredients__item">
+        <article class="modal-card">
+          <div class="modal-card__wrapper">
+            <img class="modal-card__img product-card__img--scale"
+              src="images/catalog/additional-bacon.png" width="125" height="125" alt="Фото Бекона">
+            <div class="modal-card__inner">
+              <h3 class="modal-card__title">
+                Бекон
+              </h3>
+            </div>
+            <div class="modal-card__row">
+              <span class="modal-card__price">35
+                <span class="modal-card__currency">грн.</span>
+              </span>
+              <button class="modal-card__button" type="button">
+                <svg class="counter__btn">
+                  <use xlink:href="images/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <li class="ingredients__item">
+        <article class="modal-card">
+          <div class="modal-card__wrapper">
+            <img class="modal-card__img product-card__img--scale"
+              src="images/catalog/additional-salami.png" width="125" height="125" alt="Фото салями">
+            <div class="modal-card__inner">
+              <h3 class="modal-card__title">
+                Салями
+              </h3>
+            </div>
+            <div class="modal-card__row">
+              <span class="modal-card__price">25
+                <span class="modal-card__currency">грн.</span>
+              </span>
+              <button class="modal-card__button" type="button">
+                <svg class="counter__btn">
+                  <use xlink:href="images/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <li class="ingredients__item">
+        <article class="modal-card">
+          <div class="modal-card__wrapper">
+            <img class="modal-card__img product-card__img--scale"
+              src="images/catalog/additional-chiken.png" width="125" height="125" alt="Фото Курицы">
+            <div class="modal-card__inner">
+              <h3 class="modal-card__title">
+                Курица
+              </h3>
+            </div>
+            <div class="modal-card__row">
+              <span class="modal-card__price">25
+                <span class="modal-card__currency">грн.</span>
+              </span>
+              <button class="modal-card__button" type="button">
+                <svg class="counter__btn">
+                  <use xlink:href="images/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <li class="ingredients__item">
+        <article class="modal-card">
+          <div class="modal-card__wrapper">
+            <img class="modal-card__img product-card__img--scale"
+              src="images/catalog/additional-shrimps.png" width="125" height="125"
+              alt="Фото Креветок">
+            <div class="modal-card__inner">
+              <h3 class="modal-card__title">
+                Креветки
+              </h3>
+            </div>
+            <div class="modal-card__row">
+              <span class="modal-card__price">30
+                <span class="modal-card__currency">грн.</span>
+              </span>
+              <button class="modal-card__button" type="button">
+                <svg class="counter__btn">
+                  <use xlink:href="images/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <li class="ingredients__item">
+        <article class="modal-card">
+          <div class="modal-card__wrapper">
+            <img class="modal-card__img product-card__img--scale"
+              src="images/catalog/additional-tavern.png" width="125" height="125" alt="Фото Шинки">
+            <div class="modal-card__inner">
+              <h3 class="modal-card__title">
+                Шинка
+              </h3>
+            </div>
+            <div class="modal-card__row">
+              <span class="modal-card__price">55
+                <span class="modal-card__currency">грн.</span>
+              </span>
+              <button class="modal-card__button" type="button">
+                <svg class="counter__btn">
+                  <use xlink:href="images/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <li class="ingredients__item">
+        <article class="modal-card">
+          <div class="modal-card__wrapper">
+            <img class="modal-card__img product-card__img--scale"
+              src="images/catalog/additional-tomato.png" width="125" height="125" alt="Фото Томатов">
+            <div class="modal-card__inner">
+              <h3 class="modal-card__title">
+                Томаты
+              </h3>
+            </div>
+            <div class="modal-card__row">
+              <span class="modal-card__price">10
+                <span class="modal-card__currency">грн.</span>
+              </span>
+              <button class="modal-card__button" type="button">
+                <svg class="counter__btn">
+                  <use xlink:href="images/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <li class="ingredients__item">
+        <article class="modal-card">
+          <div class="modal-card__wrapper">
+            <img class="modal-card__img product-card__img--scale"
+              src="images/catalog/additional-pepper.png" width="125" height="125"
+              alt="Фото Перца гриль">
+            <div class="modal-card__inner">
+              <h3 class="modal-card__title">
+                Перец гриль
+              </h3>
+            </div>
+            <div class="modal-card__row">
+              <span class="modal-card__price">20
+                <span class="modal-card__currency">грн.</span>
+              </span>
+              <button class="modal-card__button" type="button">
+                <svg class="counter__btn">
+                  <use xlink:href="images/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <li class="ingredients__item">
+        <article class="modal-card">
+          <div class="modal-card__wrapper">
+            <img class="modal-card__img product-card__img--scale"
+              src="images/catalog/additional-mushrooms.png" width="125" height="125"
+              alt="Фото Грибов">
+            <div class="modal-card__inner">
+              <h3 class="modal-card__title">
+                Грибы
+              </h3>
+            </div>
+            <div class="modal-card__row">
+              <span class="modal-card__price">15
+                <span class="modal-card__currency">грн.</span>
+              </span>
+              <button class="modal-card__button" type="button">
+                <svg class="counter__btn">
+                  <use xlink:href="images/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <li class="ingredients__item">
+        <article class="modal-card">
+          <div class="modal-card__wrapper">
+            <img class="modal-card__img product-card__img--scale"
+              src="images/catalog/additional-pineapple.png" width="125" height="125"
+              alt="Фото Ананасов">
+            <div class="modal-card__inner">
+              <h3 class="modal-card__title">
+                Ананасы
+              </h3>
+            </div>
+            <div class="modal-card__row">
+              <span class="modal-card__price">15
+                <span class="modal-card__currency">грн.</span>
+              </span>
+              <button class="modal-card__button" type="button">
+                <svg class="counter__btn">
+                  <use xlink:href="images/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <li class="ingredients__item">
+        <article class="modal-card">
+          <div class="modal-card__wrapper">
+            <img class="modal-card__img product-card__img--scale"
+              src="images/catalog/additional-corn.png" width="125" height="125" alt="Фото Кукурузы">
+            <div class="modal-card__inner">
+              <h3 class="modal-card__title">
+                Кукуруза
+              </h3>
+            </div>
+            <div class="modal-card__row">
+              <span class="modal-card__price">5
+                <span class="modal-card__currency">грн.</span>
+              </span>
+              <button class="modal-card__button" type="button">
+                <svg class="counter__btn">
+                  <use xlink:href="images/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <li class="ingredients__item">
+        <article class="modal-card">
+          <div class="modal-card__wrapper">
+            <img class="modal-card__img product-card__img--scale"
+              src="images/catalog/additional-arugula.png" width="125" height="125" alt="Фото Руколы">
+            <div class="modal-card__inner">
+              <h3 class="modal-card__title">
+                Рукола
+              </h3>
+            </div>
+            <div class="modal-card__row">
+              <span class="modal-card__price">10
+                <span class="modal-card__currency">грн.</span>
+              </span>
+              <button class="modal-card__button" type="button">
+                <svg class="counter__btn">
+                  <use xlink:href="images/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+
+  <div class="ingredients__row">
+    <span class="ingredients__general">Дополнительные ингридиенты:</span>
+
+    <div class="ingredients__addon">
+      <span class="ingredients__name">Салями
+        <span class="ingredients__amount">( 1 )</span>
+
+        <button class="ingredients__delete">
+          <svg>
+            <use xlink:href="images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </span>
+    </div>
+  </div>
+</div>`;
+
+    const modalProductCart = `<div class="modal-product__row modal-card__row">
+<span class="modal-product__sum">Итого:
+  <span class="modal-product__price">${productInfo.price}
+  </span>
+</span>
+<button class="modal-product__btn button" type="button">В корзину</button>
+</div>`;
+
+
+    if (card.hasAttribute('pizza')) {
+      modalProduct.insertAdjacentHTML('beforeend', modalItemHtml);
+      modalProduct.insertAdjacentHTML('beforeend', modalIngredients);
+      modalProduct.insertAdjacentHTML('beforeend', modalProductCart);
+    } else {
+      modalProduct.insertAdjacentHTML('beforeend', modalItemHtml);
+      modalProduct.insertAdjacentHTML('beforeend', modalProductCart);
+    }
+
+    modal.classList.add('modal--open');
+    bodyLock.classList.add('lock');
+    overlay.classList.add('overlay--active');
+  }
+
+  const modalClose = document.querySelectorAll('.modal-product__close');
+
+  modalClose.forEach(btn => {
+    btn.addEventListener('click', () => {
+      modalProduct.innerHTML = '';
+      modal.classList.remove('modal--open');
+      bodyLock.classList.remove('lock');
+      overlay.classList.remove('overlay--active');
+    });
+  });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const CATALOG = [
 
 //   {
@@ -670,504 +1212,4 @@
 //     productsBox.insertAdjacentHTML('beforeend', item);
 //   });
 // }
-
-const modal = document.querySelector('.modal');
-const modalWrapper = document.querySelector('.modal__wrapper');
-
-const bodyLock = document.querySelector('body');
-const overlay = document.querySelector('.overlay');
-
-
-
-window.addEventListener('click', function (e) {
-
-  const target = e.target;
-
-
-
-
-
-  if (target.classList.contains('product-card__btn')) {
-
-
-    const card = target.closest('.product-card');
-
-
-    const productInfo = {
-      img: card.querySelector('.product-card__img').getAttribute('src'),
-      alt: card.querySelector('.product-card__img').getAttribute('alt'),
-      title: card.querySelector('.product-card__title').innerText,
-      description: card.querySelector('.product-card__description').innerText,
-      price: card.querySelector('.product-card__price').innerText,
-    };
-
-    // console.log(productInfo);
-
-    const modalItemHtml = `<div class="modal-product">
-
-    <div class="modal-product__inner">
-
-      <div class="modal-product__img">
-        <img class="product-card__img" src="${productInfo.img}" width="240" height="240"
-          alt="${productInfo.alt}">
-      </div>
-
-      <div class="modal-product__info">
-        <button data-close class="modal-product__close" type="button">
-          <svg>
-            <use xlink:href="images/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-
-        <h3 class="modal-product__title">
-          ${productInfo.title}
-        </h3>
-
-        <div class="modal-product__description">
-          <p>
-            ${productInfo.description}
-          </p>
-        </div>
-
-        <div class="counter">
-          <div class="counter__control" data-action="minus">
-            <svg class="counter__btn">
-              <use xlink:href="images/sprite.svg#icon-minus"></use>
-            </svg>
-          </div>
-          <div class="counter__current">1
-            <span>шт.</span>
-          </div>
-          <div class="counter__control" data-action="plus">
-            <svg class="counter__btn">
-              <use xlink:href="images/sprite.svg#icon-plus"></use>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="ingredients">
-      <h4 class="ingredients__title">Дополнительные ингридиенты:</h4>
-      <div class="ingredients__wrapper">
-        <ul class="ingredients__list">
-
-          <li class="ingredients__item">
-            <article class="modal-card">
-              <div class="modal-card__wrapper">
-                <img class="modal-card__img product-card__img--scale"
-                  src="images/catalog/additional-gorgonzola.png" width="125" height="125"
-                  alt="Фото сыра Горгондзола">
-
-                <div class="modal-card__inner">
-                  <h3 class="modal-card__title">
-                    Горгондзола
-                  </h3>
-                </div>
-
-                <div class="modal-card__row">
-                  <span class="modal-card__price">25
-                    <span class="modal-card__currency">грн.</span>
-                  </span>
-                  <button class="modal-card__button" type="button">
-                    <svg class="counter__btn">
-                      <use xlink:href="images/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </article>
-          </li>
-
-          <li class="ingredients__item">
-            <article class="modal-card">
-              <div class="modal-card__wrapper">
-                <img class="modal-card__img product-card__img--scale"
-                  src="images/catalog/additional-mozzarella.png" width="125" height="125"
-                  alt="Фото сыра Моцарелла">
-
-                <div class="modal-card__inner">
-                  <h3 class="modal-card__title">
-                    Моцарелла
-                  </h3>
-                </div>
-
-                <div class="modal-card__row">
-                  <span class="modal-card__price">20
-                    <span class="modal-card__currency">грн.</span>
-                  </span>
-                  <button class="modal-card__button" type="button">
-                    <svg class="counter__btn">
-                      <use xlink:href="images/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </article>
-          </li>
-
-          <li class="ingredients__item">
-            <article class="modal-card">
-              <div class="modal-card__wrapper">
-                <img class="modal-card__img product-card__img--scale"
-                  src="images/catalog/additional-parmesan.png" width="125" height="125"
-                  alt="Фото сыра Пармезан">
-                <div class="modal-card__inner">
-                  <h3 class="modal-card__title">
-                    Пармезан
-                  </h3>
-                </div>
-                <div class="modal-card__row">
-                  <span class="modal-card__price">25
-                    <span class="modal-card__currency">грн.</span>
-                  </span>
-                  <button class="modal-card__button" type="button">
-                    <svg class="counter__btn">
-                      <use xlink:href="images/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-
-            </article>
-          </li>
-
-          <li class="ingredients__item">
-            <article class="modal-card">
-              <div class="modal-card__wrapper">
-                <img class="modal-card__img product-card__img--scale product-card__img--scale"
-                  src="images/catalog/additional-salmon.png" width="125" height="125" alt="Фото Лосося">
-                <div class="modal-card__inner">
-                  <h3 class="modal-card__title">
-                    Лосось
-                  </h3>
-                </div>
-                <div class="modal-card__row">
-                  <span class="modal-card__price">55
-                    <span class="modal-card__currency">грн.</span>
-                  </span>
-                  <button class="modal-card__button" type="button">
-                    <svg class="counter__btn">
-                      <use xlink:href="images/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </article>
-          </li>
-
-          <li class="ingredients__item">
-            <article class="modal-card">
-              <div class="modal-card__wrapper">
-                <img class="modal-card__img product-card__img--scale"
-                  src="images/catalog/additional-bacon.png" width="125" height="125" alt="Фото Бекона">
-                <div class="modal-card__inner">
-                  <h3 class="modal-card__title">
-                    Бекон
-                  </h3>
-                </div>
-                <div class="modal-card__row">
-                  <span class="modal-card__price">35
-                    <span class="modal-card__currency">грн.</span>
-                  </span>
-                  <button class="modal-card__button" type="button">
-                    <svg class="counter__btn">
-                      <use xlink:href="images/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </article>
-          </li>
-
-          <li class="ingredients__item">
-            <article class="modal-card">
-              <div class="modal-card__wrapper">
-                <img class="modal-card__img product-card__img--scale"
-                  src="images/catalog/additional-salami.png" width="125" height="125" alt="Фото салями">
-                <div class="modal-card__inner">
-                  <h3 class="modal-card__title">
-                    Салями
-                  </h3>
-                </div>
-                <div class="modal-card__row">
-                  <span class="modal-card__price">25
-                    <span class="modal-card__currency">грн.</span>
-                  </span>
-                  <button class="modal-card__button" type="button">
-                    <svg class="counter__btn">
-                      <use xlink:href="images/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </article>
-          </li>
-
-          <li class="ingredients__item">
-            <article class="modal-card">
-              <div class="modal-card__wrapper">
-                <img class="modal-card__img product-card__img--scale"
-                  src="images/catalog/additional-chiken.png" width="125" height="125" alt="Фото Курицы">
-                <div class="modal-card__inner">
-                  <h3 class="modal-card__title">
-                    Курица
-                  </h3>
-                </div>
-                <div class="modal-card__row">
-                  <span class="modal-card__price">25
-                    <span class="modal-card__currency">грн.</span>
-                  </span>
-                  <button class="modal-card__button" type="button">
-                    <svg class="counter__btn">
-                      <use xlink:href="images/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </article>
-          </li>
-
-          <li class="ingredients__item">
-            <article class="modal-card">
-              <div class="modal-card__wrapper">
-                <img class="modal-card__img product-card__img--scale"
-                  src="images/catalog/additional-shrimps.png" width="125" height="125"
-                  alt="Фото Креветок">
-                <div class="modal-card__inner">
-                  <h3 class="modal-card__title">
-                    Креветки
-                  </h3>
-                </div>
-                <div class="modal-card__row">
-                  <span class="modal-card__price">30
-                    <span class="modal-card__currency">грн.</span>
-                  </span>
-                  <button class="modal-card__button" type="button">
-                    <svg class="counter__btn">
-                      <use xlink:href="images/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </article>
-          </li>
-
-          <li class="ingredients__item">
-            <article class="modal-card">
-              <div class="modal-card__wrapper">
-                <img class="modal-card__img product-card__img--scale"
-                  src="images/catalog/additional-tavern.png" width="125" height="125" alt="Фото Шинки">
-                <div class="modal-card__inner">
-                  <h3 class="modal-card__title">
-                    Шинка
-                  </h3>
-                </div>
-                <div class="modal-card__row">
-                  <span class="modal-card__price">55
-                    <span class="modal-card__currency">грн.</span>
-                  </span>
-                  <button class="modal-card__button" type="button">
-                    <svg class="counter__btn">
-                      <use xlink:href="images/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </article>
-          </li>
-
-          <li class="ingredients__item">
-            <article class="modal-card">
-              <div class="modal-card__wrapper">
-                <img class="modal-card__img product-card__img--scale"
-                  src="images/catalog/additional-tomato.png" width="125" height="125" alt="Фото Томатов">
-                <div class="modal-card__inner">
-                  <h3 class="modal-card__title">
-                    Томаты
-                  </h3>
-                </div>
-                <div class="modal-card__row">
-                  <span class="modal-card__price">10
-                    <span class="modal-card__currency">грн.</span>
-                  </span>
-                  <button class="modal-card__button" type="button">
-                    <svg class="counter__btn">
-                      <use xlink:href="images/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </article>
-          </li>
-
-          <li class="ingredients__item">
-            <article class="modal-card">
-              <div class="modal-card__wrapper">
-                <img class="modal-card__img product-card__img--scale"
-                  src="images/catalog/additional-pepper.png" width="125" height="125"
-                  alt="Фото Перца гриль">
-                <div class="modal-card__inner">
-                  <h3 class="modal-card__title">
-                    Перец гриль
-                  </h3>
-                </div>
-                <div class="modal-card__row">
-                  <span class="modal-card__price">20
-                    <span class="modal-card__currency">грн.</span>
-                  </span>
-                  <button class="modal-card__button" type="button">
-                    <svg class="counter__btn">
-                      <use xlink:href="images/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </article>
-          </li>
-
-          <li class="ingredients__item">
-            <article class="modal-card">
-              <div class="modal-card__wrapper">
-                <img class="modal-card__img product-card__img--scale"
-                  src="images/catalog/additional-mushrooms.png" width="125" height="125"
-                  alt="Фото Грибов">
-                <div class="modal-card__inner">
-                  <h3 class="modal-card__title">
-                    Грибы
-                  </h3>
-                </div>
-                <div class="modal-card__row">
-                  <span class="modal-card__price">15
-                    <span class="modal-card__currency">грн.</span>
-                  </span>
-                  <button class="modal-card__button" type="button">
-                    <svg class="counter__btn">
-                      <use xlink:href="images/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </article>
-          </li>
-
-          <li class="ingredients__item">
-            <article class="modal-card">
-              <div class="modal-card__wrapper">
-                <img class="modal-card__img product-card__img--scale"
-                  src="images/catalog/additional-pineapple.png" width="125" height="125"
-                  alt="Фото Ананасов">
-                <div class="modal-card__inner">
-                  <h3 class="modal-card__title">
-                    Ананасы
-                  </h3>
-                </div>
-                <div class="modal-card__row">
-                  <span class="modal-card__price">15
-                    <span class="modal-card__currency">грн.</span>
-                  </span>
-                  <button class="modal-card__button" type="button">
-                    <svg class="counter__btn">
-                      <use xlink:href="images/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </article>
-          </li>
-
-          <li class="ingredients__item">
-            <article class="modal-card">
-              <div class="modal-card__wrapper">
-                <img class="modal-card__img product-card__img--scale"
-                  src="images/catalog/additional-corn.png" width="125" height="125" alt="Фото Кукурузы">
-                <div class="modal-card__inner">
-                  <h3 class="modal-card__title">
-                    Кукуруза
-                  </h3>
-                </div>
-                <div class="modal-card__row">
-                  <span class="modal-card__price">5
-                    <span class="modal-card__currency">грн.</span>
-                  </span>
-                  <button class="modal-card__button" type="button">
-                    <svg class="counter__btn">
-                      <use xlink:href="images/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </article>
-          </li>
-
-          <li class="ingredients__item">
-            <article class="modal-card">
-              <div class="modal-card__wrapper">
-                <img class="modal-card__img product-card__img--scale"
-                  src="images/catalog/additional-arugula.png" width="125" height="125" alt="Фото Руколы">
-                <div class="modal-card__inner">
-                  <h3 class="modal-card__title">
-                    Рукола
-                  </h3>
-                </div>
-                <div class="modal-card__row">
-                  <span class="modal-card__price">10
-                    <span class="modal-card__currency">грн.</span>
-                  </span>
-                  <button class="modal-card__button" type="button">
-                    <svg class="counter__btn">
-                      <use xlink:href="images/sprite.svg#icon-plus"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </article>
-          </li>
-        </ul>
-      </div>
-
-      <div class="ingredients__row">
-        <span class="ingredients__general">Дополнительные ингридиенты:</span>
-
-        <div class="ingredients__addon">
-          <span class="ingredients__name">Салями
-            <span class="ingredients__amount">( 1 )</span>
-
-            <button class="ingredients__delete">
-              <svg>
-                <use xlink:href="images/sprite.svg#icon-close"></use>
-              </svg>
-            </button>
-          </span>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal-product__row modal-card__row">
-      <span class="modal-product__sum">Итого:
-        <span class="modal-product__price">${productInfo.price}
-        </span>
-      </span>
-      <button class="modal-product__btn button" type="button">В корзину</button>
-    </div>
-  </div>`;
-
-    modalWrapper.insertAdjacentHTML('beforeend', modalItemHtml);
-    modal.classList.add('modal--open');
-    bodyLock.classList.add('lock');
-    overlay.classList.add('overlay--active');
-  }
-
-  const modalClose = document.querySelectorAll('.modal-product__close');
-
-  modalClose.forEach(btn => {
-    btn.addEventListener('click', () => {
-      modalWrapper.innerHTML = '';
-      modal.classList.remove('modal--open');
-      bodyLock.classList.remove('lock');
-      overlay.classList.remove('overlay--active');
-    });
-  });
-});
-
 
